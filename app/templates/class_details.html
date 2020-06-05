@@ -1,0 +1,199 @@
+{% raw %}
+<script type="text/x-template" id="class-details--content">
+<div>
+  <div class="page-title-bar-container ss-rel-pos">
+    <img :src="categories[category].image" class="ss-overlayed-filling-img">
+    <!--
+    <img src="../static/img/placeholder.png" class="ss-overlayed-filling-img">
+    -->
+    <div class="text-center ss-container-on-overlayed-img">
+      <h2 class="display-4">{{ categories[category].name }}</h2>
+      <p>{{ categories[category].brief_intro }}</p>
+    </div>
+  </div>
+
+  <div class="container mt-5">
+    <template v-for="(cls, i) in categories[category].subclasses" :key="i">
+      <div>
+        <div v-bind:style="{ backgroundImage: cls.bg_image }">
+          <h4>{{ cls.name }}</h4>
+          <ul>
+            <li>{{ cls.ages }}</li>
+            <template v-for="(day, j) in cls.days" :key="j">
+              <li>{{ day }}, {{ cls.hours[j] }}</li>
+            </template>
+            <template v-for="(instructor, j) in cls.instructors" :key="j">
+              <li>{{ instructor }}</li>
+            </template>
+            <li>{{ cls.address }}</li>
+            <li>{{ cls.fee }}</li>
+            <li>{{ cls.discount_fee }}&nbsp;(10 lessons ticket)</li>
+          </ul>
+        </div>
+      </div>
+    </template>
+  </div>
+</div>
+</script>
+{% endraw %}
+
+<script>
+  var ClassDetails = {
+    template: "#class-details--content",
+    data: function () {
+      return {
+        category: '',
+        categories: {
+          'hiphop': {
+            name: 'Hip-Hop',
+            image: "../static/img/hiphop-image.jpg",
+            brief_intro: '3 Classes for Age 2 - Adult',
+            full_address: 'Harmony Club, 1777 Saratoga Ave, San Jose',
+            address: 'Harmony Club',
+            subclasses: [
+              {
+                name: 'Mini Hip-Hop Rythm Training',
+                instructors: ['Noriko T Rovner'],
+                ages: 'Age 2 - 4',
+                days: ['Fri.'],
+                hours: ['4:00-5:00pm'],
+                bg_image: 'url("../static/img/placeholder.png")',
+                fee: '$15/lesson',
+                discount_fee: '$13/lesson',
+              },
+              {
+                name: 'Junior Hip-Hop',
+                instructors: ['Noriko T Rovner'],
+                ages: 'Age 5 - 9',
+                days: ['Fri.'],
+                hours: ['5:00-6:00pm'],
+                bg_image: 'url("../static/img/placeholder.png")',
+                fee: '$15/lesson',
+                discount_fee: '$13/lesson',
+              },
+              {
+                name: 'Hip-Hop',
+                instructors: ['Jocel Taylor'],
+                ages: 'Age 8 - Adult',
+                days: ['Sun.'],
+                hours: ['9:00-10:00am'],
+                bg_image: 'url("../static/img/placeholder.png")',
+                fee: '$15/lesson',
+                discount_fee: '$13/lesson',
+              },
+            ],
+          },
+          'ballet': {
+            name: 'Ballet',
+            image: "../static/img/ballet-image.jpg",
+            brief_intro: '2 Classes for Age 3 - 10',
+            full_address: 'Harmony Club, 1777 Saratoga Ave, San Jose',
+            address: 'Harmony Club',
+            subclasses: [
+              {
+                name: 'Mini Ballet',
+                instructors: ['Megumi Riel'],
+                ages: 'Age 3 - 5',
+                days: ['Wed.'],
+                hours: ['3:20-4:20pm'],
+                bg_image: 'url("../static/img/placeholder.png")',
+                fee: '$15/lesson',
+                discount_fee: '$13/lesson',
+              },
+              {
+                name: 'Petite Ballet',
+                instructors: ['Megumi Riel'],
+                ages: 'Age 6 - 10',
+                days: ['Wed.'],
+                hours: ['4:30-6:00pm'],
+                bg_image: 'url("../static/img/placeholder.png")',
+                fee: '$15/lesson',
+                discount_fee: '$13/lesson',
+              },
+            ],
+          },
+          'jazz': {
+            name: 'Jazz',
+            image: "../static/img/jazz-image.jpg",
+            brief_intro: '2 Classes for Age 5 - Adult',
+            full_address: 'Harmony Club, 1777 Saratoga Ave, San Jose',
+            address: 'Harmony Club',
+            subclasses: [
+              {
+                name: 'Jazz Funk',
+                instructors: ['Noriko T Rovner'],
+                ages: 'Age 7 - Adult',
+                days: ['Sat.'],
+                hours: ['12:10-1:10pm'],
+                bg_image: 'url("../static/img/placeholder.png")',
+                fee: '$15/lesson',
+                discount_fee: '$13/lesson',
+              },
+              {
+                name: 'Jazz Ballet + Ballet Technique',
+                instructors: ['Noriko T Rovner'],
+                ages: 'Age 5 - 8',
+                days: ['Sat.'],
+                hours: ['1:15-2:45pm'],
+                bg_image: 'url("../static/img/placeholder.png")',
+                fee: '$19/lesson',
+                discount_fee: 'Contact us',
+              },
+            ],
+          },
+          'fitness': {
+            name: 'Fitness',
+            image: "../static/img/hothura-image.JPG",
+            brief_intro: 'For Age 7 - Adult',
+            full_address: 'Harmony Club, 1777 Saratoga Ave, San Jose',
+            address: 'Harmony Club',
+            subclasses: [
+              {
+                name: 'Hot Hula Fitness',
+                instructors: ['Noriko T Rovner'],
+                ages: 'Age 7 - Adult',
+                days: ['Sun.'],
+                hours: ['8:00-9:00am'],
+                bg_image: 'url("../static/img/placeholder.png")',
+                fee: '$15/lesson',
+                discount_fee: '$13/lesson',
+              },
+            ],
+          },
+          'senior': {
+            name: 'Classes for age 50+',
+            image: "../static/img/zumba-image.jpg",
+            brief_intro: '2 Classes for Any Ages',
+            full_address: 'Harmony Club, 1777 Saratoga Ave, San Jose',
+            address: 'Harmony Club',
+            subclasses: [
+              {
+                name: 'Zumba Gold',
+                instructors: ['Noriko T Rovner'],
+                ages: 'Any ages',
+                days: ['Mon.', 'Fri.'],
+                hours: ['10:00-11:00a', '9:00-10:00am'],
+                bg_image: 'url("../static/img/placeholder.png")',
+                fee: '$7/lesson',
+                discount_fee: 'Contact us',
+              },
+              {
+                name: 'Hip-Hop Gold',
+                instructors: ['Noriko T Rovner'],
+                ages: 'Any ages',
+                days: ['Mon.'],
+                hours: ['11:00-12:00pm'],
+                bg_image: 'url("../static/img/placeholder.png")',
+                fee: '$10/lesson',
+                discount_fee: 'Contact us',
+              },
+            ],
+          }
+        },
+      };
+    },
+    created: function () {
+      this.category = this.$route.params.category;
+    }
+  };
+</script>

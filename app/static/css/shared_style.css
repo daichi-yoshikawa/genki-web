@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+html, body {
+    width: var(--main-width);
+    height: var(--main-height);
+    color: var(--main-color);
+    font-size: var(--main-font-size);
+    font-family: var(--main-font-family);
+    background-color: var(--main-background-color);
+}
+
+.container {
+    max-width: var(--main-container-width);
+}
+
+ul {
+    list-style: none;
+    padding-left: var(--ul-padding-left);
+}
+
+a {
+    color: var(--main-a-color);
+}
+
+a:hover {
+    color: var(--main-a-hover-color);
+    text-decoration: none;
+}
+
+footer h1 {
+    font-size: var(--footer-h1-font-size);
+    font-weight: var(--footer-h1-font-weight);
+}
+
+footer, footer a, footer a:hover {
+    color: var(--footer-color);
+    background-color: var(--footer-background-color);
+}
+
+footer .ss-copyright {
+    color: var(--footer-copyright-font-size);
+}
+
+footer .ss-footer-fa-default {
+    font-size: var(--footer-fa-font-size);
+    vertical-align: var(--footer-fa-vertical-align);
+}
+
+.fa-envelope.ss-fa-original-color {
+    color: #ffffff;
+}
+
+.fa-facebook.ss-fa-original-color {
+    color: var(--facebook-color);
+}
+
+.fa-twitter.ss-fa-original-color {
+    color: var(--twitter-color);
+}
+
+.fa-youtube.ss-fa-original-color {
+    color: var(--youtube-color);
+}
+
+.fa-linkedin.ss-fa-original-color {
+    color: var(--linkedin-color);
+}
+
+.fa-github.ss-fa-original-color {
+    color: var(--github-color);
+}
+
+nav .nav-logo {
+    height: var(--nav-logo-height);
+}
+
+nav .nav-logo-text {
+    font-size: var(--nav-logo-text-font-size);
+    font-family: var(--nav-logo-text-font-family);
+}
+
+.nav-item {
+    color: var(--main-color);
+    font-size: var(--nav-item-font-size);
+    font-weight: var(--nav-item-weight);
+}
+
+.nav-item .ss-nav-item-side-bar-effect {
+    color: var(--main-color);
+    display: inline-block;
+}
+
+.nav-item .ss-nav-item-side-bar-effect::after {
+    content: '';
+    display: block;
+    width: 0px;
+    height: var(--nav-item-side-bar-effect-thickness);
+    background: var(--main-effect-color);
+    transition: var(--nav-item-side-bar-effect-transition);
+}
+
+.nav-item .ss-nav-item-side-bar-effect:hover::after {
+    width: 100%;
+}
+
+.ss-border {
+    border: 1px solid #000;
+}
+.ss-black-border {
+    border: 1px solid #000;
+}
+.ss-red-border {
+    border: 1px solid #ff0000;
+}
+.ss-blue-border {
+    border: 1px solid #0000ff;
+}
+.ss-green-border {
+    border: 1px solid #007700;
+}
+.ss-yellow-border {
+    border: 1px solid #ffff00;
+}
+
+.ss-rel-pos {
+    position: relative;
+}
+
+.ss-abs-pos {
+    position: absolute;
+}
+
+/* Images */
+.ss-filling-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ss-overlayed-filling-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ss-container-on-overlayed-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+/* carousel */
+.carousel-item .ss-fitting-img-top-focus {
+    width: 100%;
+    object-fit: cover;
+    object-position: 0 0;
+}
+
+.carousel-item .ss-fitting-img-center-focus {
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.carousel-item .ss-fitting-img-bottom-focus {
+    width: 100%;
+    object-fit: cover;
+    object-position: 100% 100%;
+}

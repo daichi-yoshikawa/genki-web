@@ -1,0 +1,38 @@
+/* Must be linked before linking other non-3rd party css files. */
+
+:root {
+    --main-width: 100%;
+    --main-height: 100%;
+    --main-container-width: 1400px;
+    --main-color: #020202;
+    --main-a-color: #020202;
+    --main-a-hover-color: #020202;
+    --main-font-size: medium;
+    --main-font-family: 'Lato';/*Arial, Helvetica, sans-serif;*/
+    --main-effect-color: #fec400;
+    --main-effect-color-md-opacity: rgba(254, 196, 0, .5);
+    --main-effect-color-sm-opacity: rgba(254, 196, 0, .2);
+    --main-background-color: none;
+    --a-font-color: #020202;
+    --ul-padding-left: 0;
+    --footer-background-color: #dddddd;
+    --footer-color: #707070;
+    --footer-h1-font-size: 1.2rem;
+    --footer-h1-font-weight: none;
+    --footer-fa-font-size: 30px;
+    --footer-fa-vertical-align: middle;
+    --nav-logo-height: 40px;
+    --nav-logo-text-font-size: 1.4rem;
+    --nav-logo-text-font-family: 'Lato';/*Arial, Helvetica, sans-serif;*/
+    --nav-item-font-size: 1.2rem;
+    --nav-item-weight: none;
+    --nav-item-side-bar-effect-thickness: 4px;
+    --nav-item-side-bar-effect-transition: 0.2s;
+    --facebook-color: #1877f2;
+    --twitter-color: #1da1f2;
+    --youtube-color: #ff0000;
+    --linkedin-color: #007bb5;
+    --github-color: #000;
+
+    /* Images */
+}

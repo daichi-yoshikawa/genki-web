@@ -1,0 +1,39 @@
+{% raw %}
+<script type="text/x-template" id="contacts--content">
+<div>
+  <div class="page-title-bar-container ss-rel-pos">
+    <img src="../static/img/placeholder.png" class="ss-overlayed-filling-img">
+    <div class="text-center ss-container-on-overlayed-img">
+      <h2 class="display-4">Contacts</h2>
+    </div>
+  </div>
+
+  <div class="container">
+    Contacts
+    <div class="row">
+      <div class="col-sm-6 col-xs-12">
+        <p>genkicrewdanceschool@gmail.com</p>
+        <ul>
+          <li>Harmony Club, 1777 Saratoga Ave., San Jose</li>
+          <li>Akiyama Wellness Center, 110 Jackson St., San Jose</li>
+        </ul>
+        <p class="small">See class page for more details.</p>
+      </div>
+      <div class="col-sm-6 col-xs-12">
+        <div style="height:434px; display:inline-block; overflow:hidden;">
+        <!--<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1f6iMSAhv_MRUCHU0BOJY960Fjr1MiwrR" width="640" height="480"></iframe>-->
+          <iframe style="position:relative; top:-46px; border:none;" src="https://www.google.com/maps/d/u/0/embed?mid=1f6iMSAhv_MRUCHU0BOJY960Fjr1MiwrR" width="640" height="480"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</script>
+{% endraw %}
+
+<script>
+  var Contacts = {
+    template: "#contacts--content",
+  };
+</script>
+

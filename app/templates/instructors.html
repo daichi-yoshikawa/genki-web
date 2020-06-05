@@ -1,0 +1,112 @@
+{% raw %}
+<script type="text/x-template" id="instructors--content">
+<div>
+  <div class="page-title-bar-container ss-rel-pos">
+    <img src="../static/img/placeholder.png" class="ss-overlayed-filling-img">
+    <div class="text-center ss-container-on-overlayed-img">
+      <h2 class="display-4">Instructors</h2>
+    </div>
+  </div>
+
+  <div class="container mt-5">
+    <div id="custom-carousel-thumbnails" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">
+      <div class="carousel-inner" role="listbox">
+        <template v-for="(instructor, i) in instructors" :key="i">
+          <div class="carousel-item pt-5 pb-5 bg-color-offset" :class="{ 'active': i === 0 }">
+          <div class="row">
+            <div class="col-sm-6 col-xs-12">
+              <img class="float-right":src="instructor.img">
+            </div>
+            <div class="col-sm-6 col-xs-12 mt-auto instructor-panel">
+              <div class="text-wrap m-4">
+                <p class="section-main-header">{{ instructor.name }}</p>
+                <p class="section-special-header">{{ instructor.title }}</p>
+                <template v-for="paragraph in instructor.description" :key="j">
+                <p class="text-justify">{{ paragraph }}</p>
+                </template>
+              </div>
+            </div>
+          </div>
+        </div>
+        </template>
+      </div>
+      <div class="offset-to-push-out-thumbnails"></div>
+
+      <ul class="carousel-indicators">
+        <template v-for="(instructor, i) in instructors" :key="i">
+        <li data-target="#custom-carousel-thumbnails" :data-slide-to="i" :class="{ 'active': i ===0 }"><div><img :src="instructor.thumbnail"></div></li>
+        </template>
+      </ul>
+
+    </div>
+  </div>
+</div>
+</script>
+{% endraw %}
+
+<script>
+  var Instructors = {
+    template: "#instructors--content",
+    data: function () {
+      return {
+        instructors : [
+          {
+            name: 'Noriko T Rovner',
+            title: 'Director of Genki Crew Dance School',
+            classes: 'Hip-Hop, Jazz, Zumba',
+            img: "../static/img/noriko.jpg",
+            thumbnail: "../static/img/noriko.jpg",
+            description: [
+              'I was born and raised in Japan. My very first dance format was a Ballet. I transferred from Ballet to Jazz dance when I was 15 years-old. When I was in high school, Iparticipated in the high school dance team. During in that, I learned Hip-Hop, Jazz and contemporary. After came to US, I took Salsa lessons, and went to Cube and Guatemala to study Salsa.',
+              'Entire my life, I always LOVE to dance.',
+              'Dancing is my passion.',
+            ],
+          },
+          {
+            name: 'Joel Taylor',
+            classes: 'Hip-Hop',
+            img: "../static/img/joel.png",
+            thumbnail: "../static/img/joel.png",
+            description: [
+              'I am passionate about dance and I have been blessed to learn Various dance styles such as jazz, ballet, Hip-Hop and Latin dance.',
+              'I am currently a dance member and choreographer for Elemental Remix,a Hip-Hop dance team in San Jose.',
+              'In my class, I hope to inspire all of us to have Fun in learning and share the Joy of Dancing. Let\'s Dance!',
+            ],
+          },
+          {
+            name: 'Megumi Riel',
+            classes: 'Ballet',
+            img: "../static/img/megumi.jpg",
+            thumbnail: "../static/img/megumi.jpg",
+            description: [
+              'My interest in dance began early.  At 3 years old I started classical ballet, which training continued regularly for nearly 20 years.  Leveraging ballet fundamentals, I was very fortunate to transition to ballroom style dance, including styles such as salsa, merengue, and mambo.  In 2011 I moved from Japan to California. It was then that I started focusing on new and exciting dance and fitness routines, and am currently a certified instructor for Nirvana, LaBlast Fitness, and Barre Above, and teach the same at the Akiyama Wellness Center in San Jose.  In 2016 I was honored to join LaBast SF Kainos, which worked hard as a team to earn a Gold Medal participating in the World Dance Contest during the 2017 Special Winter Olympics in Graz, Austria. Recently, I\'m learning ballroom dance from Mr.William Orrock. ',
+              'My passion for dance has evolved over time to where today, not only do I strive to continue learning, I love even more sharing my holistic approach to dance, exercise, and lifestyle.',
+            ],
+          },
+          {
+            name: 'Katy Sun',
+            classes: 'Ballet',
+            img: "../static/img/katy.jpg",
+            thumbnail: "../static/img/katy.jpg",
+            description: [
+              'I am a Chinese who born and raised in Japan. I have been dancing over fifteen years. I started to dance Jazz dance when I was three and started to dance ballet at age of seven. Currently, I am studying early child development at a University. I was a assistant teacher at Tachibana Gakuin and I am doing that at Wakaba now. Also, I am volunteering at a preschool. I love children and communicate with people. I speak Japanese, Mandarin and English.',
+            ],
+          },
+          {
+            name: 'Lina',
+            classes: 'Ballet',
+            img: "../static/img/lina.png",
+            thumbnail: "../static/img/lina.png",
+            description: [
+              'Hello , Everyone.',
+              'I have been learning ballet since I was six years old and still enjoy it to this day. I’ve experienced the dedication and effort it requires to be a ballerina.',
+              'I have attended the New Ballet School (San Jose Ballet)for 10 years so far. Currently, I have finished level 4A of the ABT (American Ballet Theatre) curriculum and am moving on to 4B. Every year, I have participated in at least two shows.”',
+              'I hope that I can use these skills to teach your young ballerinas and be of use for your ballet class.',
+              'Sincerely,',
+            ],
+          },
+        ],
+      };
+    }
+  };
+</script>

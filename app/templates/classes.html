@@ -1,0 +1,182 @@
+<script type="text/x-template" id="classes--content">
+<div>
+  <div class="page-title-bar-container ss-rel-pos">
+    <img src="../static/img/placeholder.png" class="ss-overlayed-filling-img">
+    <div class="text-center ss-container-on-overlayed-img">
+      <h2 class="display-4">Classes</h2>
+    </div>
+  </div>
+
+  <div class="container classes-intro-page">
+    <div class="row">
+      {% raw %}
+      <template v-for="(cls, i) in classes" :key="i">
+        <div class="col-sm-6 col-xs-12 mt-5">
+          <div class="class-intro-img-wrapper">
+            <img class="ss-filling-img" style="max-height: 400px;" :src="cls.image">
+            <router-link :to="{ path: '/classes/' + cls.category }">
+              <span class="btn btn-primary">Learn More</span>
+            </router-link>
+          </div>
+        </div>
+        <div class="col-sm-6 col-xs-12 mt-5 pl-5 my-auto">
+          <h3>{{ cls.name }}</h3>
+          <p>{{ cls.description }}</p>
+          <ul>
+            <li>
+              <span>
+                <template v-for="(name, j) in cls.instructors" :key="j">
+                  {{ name }}
+                  <template v-if="j < cls.instructors.length-1">,&nbsp;</template>
+                </template>
+              </span>
+            </li>
+            <li><span>{{ cls.ages }}</span></li>
+            <li><span>{{ cls.address }}</span></li>
+          </ul>
+        </div>
+      </template>
+      {% endraw %}
+    </div>
+  </div>
+</div>
+</script>
+
+{% raw %}
+<script>
+  var Classes = {
+    template: "#classes--content",
+    data: function () {
+      return {
+        classes: [
+          {
+            name: 'Hip-Hop',
+            image: "../static/img/hiphop-class.png",
+            category: 'hiphop',
+            instructors: ['Noriko T Rovner', 'Jocel Taylor'],
+            ages: 'Age2-Adult',
+            address: 'Harmony Club, 1777 Saratoga Ave., San Jose',
+            description: 'blur blur blur',
+            subclasses: [
+              {
+                name: 'Mini Hip-Hop Rythm Training',
+                instructors: ['Noriko T Rovner'],
+                ages: 'Age2-4',
+                days: ['Fri.'],
+                hours: ['4:00-5:00pm'],
+              },
+              {
+                name: 'Junior Hip-Hop',
+                instructors: ['Noriko T Rovner'],
+                ages: 'Age5-9',
+                days: ['Fri.'],
+                hours: ['5:00-6:00pm'],
+              },
+              {
+                name: 'Hip-Hop',
+                instructors: ['Jocel Taylor'],
+                ages: 'Age8-Adult',
+                days: ['Sun.'],
+                hours: ['9:00-10:00am'],
+              },
+            ],
+          },
+          {
+            name: 'Ballet',
+            image: "../static/img/ballet-class.jpg",
+            category: 'ballet',
+            instructors: ['Megumi Riel', 'Katy Sun', 'Lina'],
+            ages: 'Age3-10',
+            address: 'Harmony Club, 1777 Saratoga Ave., San Jose',
+            description: 'blur blur blur',
+            subclasses: [
+              {
+                name: 'Mini Ballet',
+                instructors: ['Megumi Riel'],
+                ages: 'Age3-5',
+                days: ['Wed.'],
+                hours: ['3:20-4:20pm'],
+              },
+              {
+                name: 'Petite Ballet',
+                instructors: ['Megumi Riel'],
+                ages: 'Age6-10',
+                days: ['Wed.'],
+                hours: ['4:30-6:00pm'],
+              },
+            ],
+          },
+          {
+            name: 'Jazz',
+            image: "../static/img/ballet-class.jpg",
+            category: 'jazz',
+            instructors: ['Noriko T Rovner'],
+            ages: 'Age5-Adult',
+            address: 'Akiyama Wellness Center, 110 Jackson St., San Jose',
+            description: 'blur blur blur',
+            subclasses: [
+              {
+                name: 'Jazz Funk',
+                instructors: ['Noriko T Rovner'],
+                ages: 'Age7-Adult',
+                days: ['Sat.'],
+                hours: ['12:10-1:10pm'],
+              },
+              {
+                name: 'Jazz Ballet + Ballet Technique',
+                instructors: ['Noriko T Rovner'],
+                ages: 'Age5-8',
+                days: ['Sat.'],
+                hours: ['1:15-2:45pm'],
+              },
+            ],
+          },
+          {
+            name: 'Fitness',
+            image: "../static/img/hothura-class.JPG",
+            category: 'fitness',
+            instructors: ['Noriko T Rovner'],
+            ages: 'Age7-Adult',
+            address: 'Harmony Club, 1777 Saratoga Ave., San Jose',
+            description: 'blur blur blur',
+            subclasses: [
+              {
+                name: 'Hot Hula Fitness',
+                instructors: ['Noriko T Rovner'],
+                ages: 'Age7-Adult',
+                days: ['Sun.'],
+                hours: ['8:00-9:00am'],
+              },
+            ],
+          },
+          {
+            name: 'Class for Age 50+',
+            image: "../static/img/zumba-class.JPG",
+            category: 'senior',
+            instructors: ['Noriko T Rovner'],
+            ages: 'Any ages',
+            address: 'Akiyama Wellness Center, 110 Jackson St., San Jose',
+            description: 'blur blur blur',
+            subclasses: [
+              {
+                name: 'Zumba Gold',
+                instructors: ['Noriko T Rovner'],
+                ages: 'Any ages',
+                days: ['Mon.', 'Fri.'],
+                hours: ['10:00-11:00a', '9:00-10:00am'],
+              },
+              {
+                name: 'Hip-Hop Gold',
+                instructors: ['Noriko T Rovner'],
+                ages: 'Any ages',
+                days: ['Mon.'],
+                hours: ['11:00-12:00pm'],
+              },
+            ],
+          },
+        ]
+      };
+    },
+  };
+</script>
+{% endraw %}
