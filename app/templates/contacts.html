@@ -1,6 +1,6 @@
 {% raw %}
 <script type="text/x-template" id="contacts--content">
-<div>
+<div id="contacts-page">
   <div class="page-title-bar-container ss-rel-pos">
     <img src="../static/img/placeholder.png" class="ss-overlayed-filling-img">
     <div class="text-center ss-container-on-overlayed-img">
@@ -8,21 +8,19 @@
     </div>
   </div>
 
-  <div class="container">
-    Contacts
-    <div class="row">
-      <div class="col-sm-6 col-xs-12">
-        <p>genkicrewdanceschool@gmail.com</p>
+  <div class="container mt-5 ss-black-border">
+    <div class="row padding">
+      <div class="col-sm-6 col-xs-12 my-auto text-wrap">
+        <p><i class="fas fa-envelope mr-2 mt-1"></i>genkicrewdanceschool@gmail.com</p>
         <ul>
-          <li>Harmony Club, 1777 Saratoga Ave., San Jose</li>
-          <li>Akiyama Wellness Center, 110 Jackson St., San Jose</li>
+          <li><i class="fas fa-map-marker-alt mr-2"></i>Harmony Club, 1777 Saratoga Ave., San Jose</li>
+          <li><i class="fas fa-map-marker-alt mr-2"></i>Akiyama Wellness Center, 110 Jackson St., San Jose</li>
         </ul>
-        <p class="small">See class page for more details.</p>
+        <p class="small">Studio location deffers up to class you take. See <router-link to="/classes/#">Classes</router-link> page for more details.</p>
       </div>
       <div class="col-sm-6 col-xs-12">
-        <div style="height:434px; display:inline-block; overflow:hidden;">
-        <!--<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1f6iMSAhv_MRUCHU0BOJY960Fjr1MiwrR" width="640" height="480"></iframe>-->
-          <iframe style="position:relative; top:-46px; border:none;" src="https://www.google.com/maps/d/u/0/embed?mid=1f6iMSAhv_MRUCHU0BOJY960Fjr1MiwrR" width="640" height="480"></iframe>
+        <div class="ss-responsive-iframe-container google-map-container">
+          <iframe class="ss-responsive-iframe" style="position:relative; top:-46px; border:none;" src="https://www.google.com/maps/d/u/0/embed?mid=1f6iMSAhv_MRUCHU0BOJY960Fjr1MiwrR"></iframe>
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 {% raw %}
 <script type="text/x-template" id="instructors--content">
-<div>
+<div id="instructors-page">
   <div class="page-title-bar-container ss-rel-pos">
     <img src="../static/img/placeholder.png" class="ss-overlayed-filling-img">
     <div class="text-center ss-container-on-overlayed-img">
@@ -15,7 +15,9 @@
           <div class="carousel-item pt-5 pb-5 bg-color-offset" :class="{ 'active': i === 0 }">
           <div class="row">
             <div class="col-sm-6 col-xs-12">
-              <img class="float-right":src="instructor.img">
+              <div class="pr-3 pl-3">
+                <img class="float-right ss-box-shadow-md-to-bottom ss-hover-zoom ss-hover-zoom-sm":src="instructor.img">
+              </div>
             </div>
             <div class="col-sm-6 col-xs-12 mt-auto instructor-panel">
               <div class="text-wrap m-4">

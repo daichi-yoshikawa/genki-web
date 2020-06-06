@@ -1,3 +1,7 @@
+#app {
+    background-color: var(--main-background-color);
+}
+
 footer hr {
     padding-top: 0;
     margin-top: 0;
@@ -25,8 +29,51 @@ footer hr {
     width: 75%;
 }
 
-#custom-carousel-main .carousel-item img {
-    max-height: 480px;
+/* index.html */
+#index-page #custom-carousel-main .carousel-item img {
+    max-height: 640px;
+}
+
+#index-page .bg-container-1 {
+    background-image: -moz-linear-gradient(top, transparent 10%, var(--first-accent-color) 40%, var(--first-accent-color) 60%, transparent 90%);
+    /*
+    background-image: -webkit-linear-gradient(0, transparent 40%, var(--first-accent-color) 0%, var(--first-accent-color) 80%, transparent 0%);
+    background-image: -moz-linear-gradient(0, transparent 40%, var(--first-accent-color) 0%, var(--first-accent-color) 80%, transparent 0%);
+    background-image: linear-gradient(0, transparent 40%, var(--first-accent-color) 0%, var(--first-accent-color) 80%, transparent 0%);
+    */
+}
+
+#index-page .bg-container-2 {
+    /*
+    background-image: -webkit-linear-gradient(0, transparent 40%, var(--first-accent-color) 0%, var(--first-accent-color) 80%, transparent 0%);
+    background-image: -moz-linear-gradient(0, transparent 40%, var(--first-accent-color) 0%, var(--first-accent-color) 80%, transparent 0%);
+    background-image: linear-gradient(0, transparent 40%, var(--first-accent-color) 0%, var(--first-accent-color) 80%, transparent 0%);
+    */
+    background-image: -moz-linear-gradient(top, transparent 10%, var(--first-accent-color) 40%, var(--first-accent-color) 60%, transparent 90%);
+}
+
+#index-page .class-panels {
+    width: 576px;
+}
+
+#index-page .class-panels .class-panel-img-container {
+    width: 100%;
+    height: 200px;
+}
+
+#index-page .class-panels .class-panel-img-thin-container {
+    width: 100%;
+    height: 160px;
+}
+
+/* classes.html */
+#classes-page .custom-container-on-overlayed-img {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
 }
 
 /* instructors.html */
@@ -71,4 +118,22 @@ footer hr {
     background-image: -webkit-linear-gradient(left, transparent 240px, var(--main-effect-color-sm-opacity) 240px, var(--main-effect-color-md-opacity) 100%);
     background-image: -moz-linear-gradient(left, transparent 240px, var(--main-effect-color-sm-opacity) 240px, var(--main-effect-color-md-opacity) 100%);
     width: 100%;
+}
+
+/* contacts.html width="640" height="480"*/
+#contacts-page .google-map-container {
+    width: 100%;
+    height: 100%;
+    min-height: 480px;
+}
+
+
+/* media query */
+@media (max-width: 576px) {
+    #index-page .class-panels {
+        width: 100%;
+    }
+    #index-page .class-panels .class-panel-img-thin-container {
+        height: 200px;
+    }
 }

@@ -1,5 +1,5 @@
 <script type="text/x-template" id="classes--content">
-<div>
+<div id="classes-page">
   <div class="page-title-bar-container ss-rel-pos">
     <img src="../static/img/placeholder.png" class="ss-overlayed-filling-img">
     <div class="text-center ss-container-on-overlayed-img">
@@ -13,10 +13,12 @@
       <template v-for="(cls, i) in classes" :key="i">
         <div class="col-sm-6 col-xs-12 mt-5">
           <div class="class-intro-img-wrapper">
-            <img class="ss-filling-img" style="max-height: 400px;" :src="cls.image">
-            <router-link :to="{ path: '/classes/' + cls.category }">
-              <span class="btn btn-primary">Learn More</span>
-            </router-link>
+            <img class="ss-overlayed-filling-img" style="max-height: 400px;" :src="cls.image">
+            <div class="custom-container-on-overlayed-img">
+              <router-link :to="{ path: '/classes/' + cls.category }">
+                <span class="btn btn-primary btn-circle">Learn More</span>
+              </router-link>
+            </div>
           </div>
         </div>
         <div class="col-sm-6 col-xs-12 mt-5 pl-5 my-auto">
