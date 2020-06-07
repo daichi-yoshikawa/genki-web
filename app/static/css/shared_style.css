@@ -5,7 +5,8 @@ html, body {
     height: var(--main-height);
     color: var(--main-color);
     font-size: var(--main-font-size);
-    font-family: var(--main-font-family);
+    font-family: var(--main-font);
+    font-weight: var(--main-font-weight);
 }
 
 .container {
@@ -126,15 +127,19 @@ footer .ss-footer-fa-default {
 .navbar-toggler-icon {
     outline: 0;
 }
+nav .navbar-toggler {
+    outline: 0;
+}
 nav .nav-logo {
     height: var(--nav-logo-height);
 }
 nav .nav-logo-text {
     font-size: var(--nav-logo-text-font-size);
-    font-family: var(--nav-logo-text-font-family);
+    font-family: var(--nav-logo-text-font);
 }
 .nav-item {
     color: var(--nav-item-color);
+    font-family: var(--nav-item-font);
     font-size: var(--nav-item-font-size);
     font-weight: var(--nav-item-weight);
 }
@@ -208,11 +213,13 @@ nav .nav-logo-text {
     content: var(--accordion-toggle-content);
 }
 .ss-accordion-toggle-text {
-    font-family: var(--accordion-toggle-text-font-family);
+    font-family: var(--accordion-toggle-text-font);
     font-size: var(--accordion-toggle-text-font-size);
 }
 
-
+.email {
+    font-family: var(--email-font);
+}
 
 /* fade */
 .ss-fadein {

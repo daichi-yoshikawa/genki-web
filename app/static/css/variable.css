@@ -1,14 +1,23 @@
 /* Must be linked before linking other non-3rd party css files. */
 
 :root {
+    /* fonts */
+    /* Sans-serif, Helvetica, Arial, Fantasy */
+    --main-font: 'Open Sans', Robot, Helvetica, Arial, Sans-serif;
+    --nav-logo-text-font: Impact, Fantasy, 'Arial Black', Sans-serif;
+    --nav-item-font: Impact, Fantasy, 'Arial Black', Sans-serif;
+    --email-font: 'Lucida Console', 'Lucida Sans Typewriter', 'Andale Mono', Consolas, 'Courier', 'Courier New', Monospace;
+    --notation-font: var(--main-font);
+    --accordion-toggle-text-font: var(--main-font-family);
+
     --main-width: 100%;
     --main-height: 100%;
     --main-container-width: 1400px;
-    --main-color: #020202;
+    --main-color: #333333;
     --main-a-hover-color: #020202;
     --main-a-color: #020202;
     --main-font-size: medium;
-    --main-font-family: 'Lato';/*Arial, Helvetica, sans-serif;*/
+    --main-font-weight: 100;
     --main-effect-color: #fec400;
     --main-effect-color-md-opacity: rgba(254, 196, 0, .5);
     --main-effect-color-sm-opacity: rgba(254, 196, 0, .2);
@@ -30,7 +39,7 @@
     --nav-background-color: #333333;
     --nav-logo-height: 40px;
     --nav-logo-text-font-size: 1.4rem;
-    --nav-logo-text-font-family: 'Lato';/*Arial, Helvetica, sans-serif;*/
+
     --nav-item-color: #d5d5d5;
     --nav-item-font-size: 1.2rem;
     --nav-item-weight: bold;
@@ -74,6 +83,5 @@
     --accordion-toggle-collapsed-color: var(--second-accent-color);
     --accordion-toggle-color: var(--second-accent-color);
     --accordion-toggle-vertical-align: middle;
-    --accordion-toggle-text-font-family: var(--main-font-family);
     --accordion-toggle-text-font-size: var(--main-font-size);
 }

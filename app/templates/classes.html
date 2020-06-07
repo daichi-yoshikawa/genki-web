@@ -3,40 +3,53 @@
   <div class="page-title-bar-container ss-rel-pos">
     <img src="../static/img/placeholder.png" class="ss-overlayed-filling-img">
     <div class="text-center ss-container-on-overlayed-img">
-      <h2 class="display-4">Classes</h2>
+      <h1 class="display-4">Classes</h1>
     </div>
   </div>
 
   <div class="container mt-5 ">
     <div class="row">
       {% raw %}
-      <template v-for="(cls, i) in classes" :key="i">
+      <template v-for="(category, i) in class_categories" :key="i">
         <div class="col-md-6 col-sm-12">
-          <div class="card class-panel mx-auto margin-md ss-box-shadow-sm-to-bottom-right ss-fadein-to-top">
+          <div class="card class-category-panel mx-auto margin-md ss-box-shadow-sm-to-bottom-right ss-fadein-to-top">
             <div class="card-body no-margin no-padding">
               <div class="row no-margin">
                 <div class="col-md-6 col-sm-12 no-padding">
-                  <img class="ss-filling-img" src="../static/img/placeholder.png">
+                  <img class="ss-filling-img" :src="category.image">
                 </div>
                 <div class="col-md-6 col-sm-12 padding-xs">
-                  <h3>{{ cls.name }}</h3>
-                  <p>blur blur blur...</p>
-                  <a class="ss-accordion-toggle collapsed" data-toggle="collapse" :href="'#collapse-subclass-cards-' + i">
+                  <h3>{{ category.name }}</h3>
+                  <p>{{ category.ages }}</p>
+                  <p>{{ category.address }}</p>
+                  <a class="ss-accordion-toggle collapsed" data-toggle="collapse" :href="'#collapse-class-cards-' + i">
                     <span class="ss-accordion-toggle-text mr-2">Learn More</span>
                   </a>
                 </div>
                 <div class="col-12">
-                  <div class="collapse" :id="'collapse-subclass-cards-' + i">
-                    <template v-for="(subcls, j) in cls.subclasses" :key="j">
-                    <div class="card card-body subclass-panel no-padding margin-md ss-box-shadow-xs-to-bottom-right ss-hover-zoom ss-hover-zoom-sm">
+                  <div class="collapse" :id="'collapse-class-cards-' + i">
+                    <template v-for="(cls, j) in category.classes" :key="j">
+                    <div class="card card-body class-panel no-padding margin-md ss-box-shadow-xs-to-bottom-right ss-hover-zoom ss-hover-zoom-sm">
                       <div class="row no-margin">
                         <div class="col-md-6 col-sm-12 no-padding">
                           <img class="ss-filling-img" src="../static/img/placeholder.png">
                         </div>
                         <div class="col-md-6 col-sm-12 padding-xs">
-                          <h4>{{ subcls.name }}</h4>
-                          <p>{{ subcls.ages }}</p>
-                          <p>blur blur blur</p>
+                          <h4>{{ cls.name }}</h4>
+                          <span>{{ cls.ages }}</span><br>
+                          <template v-for="(day, j) in cls.days" :key="j">
+                          <span>{{ cls.hours[j] }} {{ day }}
+                            <template v-if="j < cls.days.length - 1">,&nbsp;</template>
+                            </template>
+                          </span><br>
+                          <template v-for="(instructor, j) in cls.instructors" :key="j">
+                          <span>{{ instructor }}
+                            <template v-if="j < cls.instructors.length - 1">,&nbsp;</template>
+                          </span><br>
+                          <span>{{ cls.fee }}</span>
+                          <template v-if="cls.discount_fee !== ''">
+                          <br><span class="small">{{ cls.discount_fee }} with 10 lessons ticket</span>
+                          </template>
                         </div>
                       </div>
                     </div>
@@ -97,7 +110,7 @@
     template: "#classes--content",
     data: function () {
       return {
-        classes: [
+        class_categories: [
           {
             name: 'Hip-Hop',
             image: "../static/img/hiphop-class.png",
@@ -106,13 +119,15 @@
             ages: 'Age 2 - Adult',
             address: 'Harmony Club, 1777 Saratoga Ave., San Jose',
             description: 'blur blur blur',
-            subclasses: [
+            classes: [
               {
                 name: 'Mini Hip-Hop Rythm Training',
                 instructors: ['Noriko T Rovner'],
                 ages: 'Age 2 - 4',
                 days: ['Fri.'],
                 hours: ['4:00 - 5:00pm'],
+                fee: '$15/lesson',
+                discount_fee: '$13/lesson',
               },
               {
                 name: 'Junior Hip-Hop',
@@ -120,6 +135,8 @@
                 ages: 'Age 5 - 9',
                 days: ['Fri.'],
                 hours: ['5:00 - 6:00pm'],
+                fee: '$15/lesson',
+                discount_fee: '$13/lesson',
               },
               {
                 name: 'Hip-Hop',
@@ -127,6 +144,8 @@
                 ages: 'Age 8 - Adult',
                 days: ['Sun.'],
                 hours: ['9:00 - 10:00am'],
+                fee: '$15/lesson',
+                discount_fee: '$13/lesson',
               },
             ],
           },
@@ -138,13 +157,15 @@
             ages: 'Age 3 - 10',
             address: 'Harmony Club, 1777 Saratoga Ave., San Jose',
             description: 'blur blur blur',
-            subclasses: [
+            classes: [
               {
                 name: 'Mini Ballet',
                 instructors: ['Megumi Riel'],
                 ages: 'Age 3 - 5',
                 days: ['Wed.'],
                 hours: ['3:20 - 4:20pm'],
+                fee: '$15/lesson',
+                discount_fee: '$13/lesson',
               },
               {
                 name: 'Petite Ballet',
@@ -152,6 +173,8 @@
                 ages: 'Age 6 - 10',
                 days: ['Wed.'],
                 hours: ['4:30 - 6:00pm'],
+                fee: '$15/lesson',
+                discount_fee: '$13/lesson',
               },
             ],
           },
@@ -163,13 +186,15 @@
             ages: 'Age 5 - Adult',
             address: 'Akiyama Wellness Center, 110 Jackson St., San Jose',
             description: 'blur blur blur',
-            subclasses: [
+            classes: [
               {
                 name: 'Jazz Funk',
                 instructors: ['Noriko T Rovner'],
                 ages: 'Age 7 - Adult',
                 days: ['Sat.'],
                 hours: ['12:10 - 1:10pm'],
+                fee: '$15/lesson',
+                discount_fee: '$13/lesson',
               },
               {
                 name: 'Jazz Ballet + Ballet Technique',
@@ -177,6 +202,8 @@
                 ages: 'Age 5 - 8',
                 days: ['Sat.'],
                 hours: ['1:15 - 2:45pm'],
+                fee: '$19/lesson',
+                discount_fee: '',
               },
             ],
           },
@@ -188,13 +215,15 @@
             ages: 'Age 7 - Adult',
             address: 'Harmony Club, 1777 Saratoga Ave., San Jose',
             description: 'blur blur blur',
-            subclasses: [
+            classes: [
               {
                 name: 'Hot Hula Fitness',
                 instructors: ['Noriko T Rovner'],
                 ages: 'Age 7 - Adult',
                 days: ['Sun.'],
                 hours: ['8:00 - 9:00am'],
+                fee: '$15/lesson',
+                discount_fee: '$13/lesson',
               },
             ],
           },
@@ -206,13 +235,15 @@
             ages: 'Any ages',
             address: 'Akiyama Wellness Center, 110 Jackson St., San Jose',
             description: 'blur blur blur',
-            subclasses: [
+            classes: [
               {
                 name: 'Zumba Gold',
                 instructors: ['Noriko T Rovner'],
                 ages: 'Any ages',
                 days: ['Mon.', 'Fri.'],
                 hours: ['10:00 - 11:00a', '9:00 - 10:00am'],
+                fee: '$7/lesson',
+                discount_fee: '',
               },
               {
                 name: 'Hip-Hop Gold',
@@ -220,6 +251,8 @@
                 ages: 'Any ages',
                 days: ['Mon.'],
                 hours: ['11:00 - 12:00pm'],
+                fee: '$10/lesson',
+                discount_fee: '',
               },
             ],
           },

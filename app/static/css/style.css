@@ -1,3 +1,10 @@
+:root {
+    --h1-font: Impact, Fantasy, 'Arial Black', Sans-serif;
+    --h1-color: #333333;
+    --h2-font: 'Verdana', 'Tahoma', 'Arial Black', Sans-serif;
+    --h2-color: #666666;;
+}
+
 #app {
     background-color: var(--main-first-background-color);
     background-image: linear-gradient(147deg, var(--main-first-background-color) 0%, var(--main-second-background-color) 74%);
@@ -10,20 +17,29 @@ footer hr {
 }
 
 .section-main-header {
+    color: var(--h1-color);
+    font-family: var(--h1-font);
     font-size: 2.4rem;
-}
-
+ }
 .section-sub-header {
+    color: var(--h2-color);
+    font-family: var(--h2-font);
     font-size: 1.6rem;
 }
-
 .section-special-header {
     font-size: 1.2rem;
+}
+
+.notation-text {
+    color: var(--second-accent-color);
 }
 
 .page-title-bar-container {
     width: 100%;
     height: 240px;
+}
+.page-title-bar-container h1 {
+    font-family: var(--h1-font);
 }
 
 .contact-us hr {
@@ -43,6 +59,16 @@ footer hr {
 }
 
 /* index.html */
+#index-page #custom-carousel-main .carousel-caption h1 {
+    font-family: Impact, Fantasy, 'Arial Black', Sans-serif;
+}
+
+#index-page #custom-carousel-main .carousel-caption p {
+    font-family: 'Verdana', 'Tahoma', 'Arial Black', Sans-serif;
+    font-size: 2.0rem;
+    font-weight: bold;
+}
+
 #index-page #custom-carousel-main .carousel-item img {
     max-height: 640px;
 }
@@ -89,15 +115,20 @@ footer hr {
     -webkit-transform: translate(-50%, -50%);
 }
 
-#classes-page .class-panel {
+#classes-page .class-category-panel {
     background-color: var(--main-effect-color-sm-opacity);
 }
 
-#classes-page .class-panel .subclass-panel {
+#classes-page .class-category-panel .class-panel {
     background-color: var(--second-accent-color);
 }
 
 /* instructors.html */
+#instructors-page .instructor-title {
+    font-family: var(--h1-font);
+    color: var(--second-accent-color);
+}
+
 #custom-carousel-thumbnails .carousel-item {
     transition: 0.7s;
 }
