@@ -1,5 +1,6 @@
 #app {
-    background-color: var(--main-background-color);
+    background-color: var(--main-first-background-color);
+    background-image: linear-gradient(147deg, var(--main-first-background-color) 0%, var(--main-second-background-color) 74%);
 }
 
 footer hr {
@@ -27,6 +28,18 @@ footer hr {
 
 .contact-us hr {
     width: 75%;
+}
+
+.fa-envelope {
+    color: white;
+}
+.fa-map-marker-alt {
+    color: var(--dark-accent-color);
+}
+.fa-ticket-alt {
+    color: black;
+    rotate: 120deg;
+    transition: 1.0s;
 }
 
 /* index.html */
@@ -76,10 +89,34 @@ footer hr {
     -webkit-transform: translate(-50%, -50%);
 }
 
+#classes-page .class-panel {
+    background-color: var(--main-effect-color-sm-opacity);
+}
+
+#classes-page .class-panel .subclass-panel {
+    background-color: var(--second-accent-color);
+}
+
 /* instructors.html */
+#custom-carousel-thumbnails .carousel-item {
+    transition: 0.7s;
+}
+
+#custom-carousel-thumbnails .carousel-item img {
+    width: 100%;
+    height: 480px;
+    max-width: 576px;
+    object-fit: cover;
+    object-position: 50% 0;
+}
+
 #custom-carousel-thumbnails .carousel-indicators {
     margin-left: auto;
     margin-right: auto;
+}
+
+#custom-carousel-thumbnails .carousel-indicators div {
+    background-color: #fff;
 }
 
 #custom-carousel-thumbnails .offset-to-push-out-thumbnails {
@@ -105,18 +142,10 @@ footer hr {
     object-position: 50% 0;
 }
 
-#custom-carousel-thumbnails .carousel-item img {
-    width: 100%;
-    height: 480px;
-    max-width: 576px;
-    object-fit: cover;
-    object-position: 50% 0;
-}
-
 #custom-carousel-thumbnails .carousel-inner .bg-color-offset {
-    background-image: linear-gradient(left, transparent 240px, var(--main-effect-color-sm-opacity) 240px, var(--main-effect-color-md-opacity) 100%);
-    background-image: -webkit-linear-gradient(left, transparent 240px, var(--main-effect-color-sm-opacity) 240px, var(--main-effect-color-md-opacity) 100%);
-    background-image: -moz-linear-gradient(left, transparent 240px, var(--main-effect-color-sm-opacity) 240px, var(--main-effect-color-md-opacity) 100%);
+    background-image: linear-gradient(left, transparent 240px, var(--bright-accent-color) 240px, var(--second-accent-color) 100%);
+    background-image: -webkit-linear-gradient(left, transparent 240px, var(--bright-accent-color) 240px, var(--second-accent-color) 100%);
+    background-image: -moz-linear-gradient(left, transparent 240px, var(--bright-accent-color) 240px, var(--second-accent-color) 100%);
     width: 100%;
 }
 

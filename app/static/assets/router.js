@@ -55,4 +55,17 @@ var router = new VueRouter({
       component: PageNotFound
     },
   ],
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 };
+  },
 });
+
+/* TODO: Fix this stupid implementation once I know
+   how to correctly detect "updating DOM, occuring after switching pages
+   by router-link, is completed.". */
+router.afterEach((to, from) => {
+  setTimeout(add_effect_scroll, 250);
+  setTimeout(add_effect_scroll, 500);
+  setTimeout(add_effect_scroll, 750);
+  setTimeout(add_effect_scroll, 1000);
+})

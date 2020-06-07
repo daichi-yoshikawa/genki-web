@@ -12,6 +12,7 @@
   <script src="{{ url_for('static', filename='vendors/bootstrap-select-1.13.14/dist/js/bootstrap-select.min.js') }}"></script>
   <script src="{{ url_for('static', filename='vendors/vue.js-2.6.11/vue.min.js') }}"></script>
   <script src="{{ url_for('static', filename='vendors/vue-router.js-3.3.2/vue-router.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendors/vue-clipboard2-0.3.1/dist/vue-clipboard.min.js') }}"></script>
   <script src="{{ url_for('static', filename='vendors/fontawesome-5.13.0/all.js') }}"></script>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/variable.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/shared_style.css') }}">
@@ -20,7 +21,7 @@
 </head>
 <body>
   <div id="app">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
       <div class="container">
         <router-link to="/" class="navbar-brand mb-0 h1 font-weight-bold">
           <img src="{{ url_for('static', filename='img/genki_logo.png') }}" class="nav-logo mr-2"><span class="nav-logo-text d-none d-sm-inline-block">Genki Crew Dance School</span>
@@ -30,11 +31,11 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbar--responsive">
-          <ul class="nav navbar-nav ml-auto">
+          <ul class="nav navbar-nav text-right ml-auto">
             {% raw %}
             <template v-for="(route, i) in $router.options.routes" :key="i">
               <template v-if="route.show_in_nav">
-                <li class="nav-item ml-3">
+                <li class="nav-item ml-3" @click="testfunc">
                   <router-link :to="{ path: route.path }" :class="{ active: route.path === $router.currentRoute.path }">
                     <span class="ss-nav-item-side-bar-effect">{{ route.name }}</span>
                   </router-link>
@@ -50,11 +51,15 @@
     <router-view></router-view>
 
     <div class="container mt-5 mp-5">
-      <div class="contact-us text-center">
-        <hr>
-        <h3 class="display-4 mb-4">Free trial</h3>
-        <p class="lead">Your first lesson is considered a trial lesson, and it is absolutely free.</p>
-        <p class="lead">Be free to contact us genkidanceschool@gmail.com, see you then!</p>
+      <hr>
+      <div class="contact-us text-center ss-fadein ss-fadein-very-slow">
+        <h3 class="display-4 pt-5 mb-4">Free Trial Lesson<i class="fas fa-ticket-alt ml-3 "></i></h3>
+        <div class="ss-div-h-centered">
+          <p class="lead">
+            Your first lesson is considered a trial lesson, and it is absolutely free.
+            <br>Be free to contact us genkidanceschool@gmail.com, see you then!
+          </p>
+        </div>
       </div>
     </div>
 
@@ -127,9 +132,13 @@
   <script>
     var app = new Vue({
       el: '#app',
-      router: router
-    })
+      router: router,
+      methods: {
+        testfunc: function() {
+          $('.navbar-collapse').collapse('hide');
+        },
+      },
+    });
   </script>
-
 </body>
 </html>

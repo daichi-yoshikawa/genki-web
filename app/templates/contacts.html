@@ -8,18 +8,28 @@
     </div>
   </div>
 
-  <div class="container mt-5 ss-black-border">
+  <div class="container">
     <div class="row padding">
-      <div class="col-sm-6 col-xs-12 my-auto text-wrap">
-        <p><i class="fas fa-envelope mr-2 mt-1"></i>genkicrewdanceschool@gmail.com</p>
-        <ul>
-          <li><i class="fas fa-map-marker-alt mr-2"></i>Harmony Club, 1777 Saratoga Ave., San Jose</li>
-          <li><i class="fas fa-map-marker-alt mr-2"></i>Akiyama Wellness Center, 110 Jackson St., San Jose</li>
-        </ul>
-        <p class="small">Studio location deffers up to class you take. See <router-link to="/classes/#">Classes</router-link> page for more details.</p>
+      <div class="col-sm-6 col-xs-12 my-auto text-wrap mx-auto">
+        <div class="ss-div-h-centered ss-fadein ss-fadein-slow">
+          <h4>Don't Miss a Free Trial Lesson!</h4>
+          <hr>
+          <div class="mt-4 mb-4">
+            <p>
+              <i class="fas fa-envelope mr-2 mt-1 ss-v-centered"></i>genkicrewdanceschool@gmail.com
+              <a type="button" @click="doCopy"><i class="far fa-copy ss-vcentered" title="Copy Genki's E-mail Address"></i></a>
+              <br><span class="small">We can respond in Japanese.</span>
+            </p>
+            <p>
+              <i class="fas fa-map-marker-alt mr-2"></i>Harmony Club, 1777 Saratoga Ave., San Jose<br>
+              <i class="fas fa-map-marker-alt mr-2"></i>Akiyama Wellness Center, 110 Jackson St., San Jose<br>
+              <span class="small">Studio location differs depending on a class. See <router-link to="/classes/#">Classes</router-link> page for more details.</span>
+            </p>
+          </div>
+        </div>
       </div>
       <div class="col-sm-6 col-xs-12">
-        <div class="ss-responsive-iframe-container google-map-container">
+        <div class="ss-responsive-iframe-container google-map-container ss-fadein ss-fadein-slow">
           <iframe class="ss-responsive-iframe" style="position:relative; top:-46px; border:none;" src="https://www.google.com/maps/d/u/0/embed?mid=1f6iMSAhv_MRUCHU0BOJY960Fjr1MiwrR"></iframe>
         </div>
       </div>
@@ -32,6 +42,22 @@
 <script>
   var Contacts = {
     template: "#contacts--content",
+    data: function() {
+      return {
+        message: 'genkicrewdanceschool@gmail.com',
+      };
+    },
+    methods: {
+      doCopy: function() {
+        this.$copyText(this.message).then(function(e) {
+          alert('Copied e-mail address!');
+          console.log(e);
+        }, function(e) {
+          alert('Failed to copy e-mail address.');
+          console.log(e);
+        });
+      },
+    },
   };
 </script>
 

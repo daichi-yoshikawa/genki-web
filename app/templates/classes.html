@@ -7,6 +7,52 @@
     </div>
   </div>
 
+  <div class="container mt-5 ">
+    <div class="row">
+      {% raw %}
+      <template v-for="(cls, i) in classes" :key="i">
+        <div class="col-md-6 col-sm-12">
+          <div class="card class-panel mx-auto margin-md ss-box-shadow-sm-to-bottom-right ss-fadein-to-top">
+            <div class="card-body no-margin no-padding">
+              <div class="row no-margin">
+                <div class="col-md-6 col-sm-12 no-padding">
+                  <img class="ss-filling-img" src="../static/img/placeholder.png">
+                </div>
+                <div class="col-md-6 col-sm-12 padding-xs">
+                  <h3>{{ cls.name }}</h3>
+                  <p>blur blur blur...</p>
+                  <a class="ss-accordion-toggle collapsed" data-toggle="collapse" :href="'#collapse-subclass-cards-' + i">
+                    <span class="ss-accordion-toggle-text mr-2">Learn More</span>
+                  </a>
+                </div>
+                <div class="col-12">
+                  <div class="collapse" :id="'collapse-subclass-cards-' + i">
+                    <template v-for="(subcls, j) in cls.subclasses" :key="j">
+                    <div class="card card-body subclass-panel no-padding margin-md ss-box-shadow-xs-to-bottom-right ss-hover-zoom ss-hover-zoom-sm">
+                      <div class="row no-margin">
+                        <div class="col-md-6 col-sm-12 no-padding">
+                          <img class="ss-filling-img" src="../static/img/placeholder.png">
+                        </div>
+                        <div class="col-md-6 col-sm-12 padding-xs">
+                          <h4>{{ subcls.name }}</h4>
+                          <p>{{ subcls.ages }}</p>
+                          <p>blur blur blur</p>
+                        </div>
+                      </div>
+                    </div>
+                    </template>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      </template>
+      {% endraw %}
+    </div>
+  </div>
+
+  <!--
   <div class="container classes-intro-page">
     <div class="row">
       {% raw %}
@@ -41,6 +87,7 @@
       {% endraw %}
     </div>
   </div>
+  -->
 </div>
 </script>
 
@@ -56,30 +103,30 @@
             image: "../static/img/hiphop-class.png",
             category: 'hiphop',
             instructors: ['Noriko T Rovner', 'Jocel Taylor'],
-            ages: 'Age2-Adult',
+            ages: 'Age 2 - Adult',
             address: 'Harmony Club, 1777 Saratoga Ave., San Jose',
             description: 'blur blur blur',
             subclasses: [
               {
                 name: 'Mini Hip-Hop Rythm Training',
                 instructors: ['Noriko T Rovner'],
-                ages: 'Age2-4',
+                ages: 'Age 2 - 4',
                 days: ['Fri.'],
-                hours: ['4:00-5:00pm'],
+                hours: ['4:00 - 5:00pm'],
               },
               {
                 name: 'Junior Hip-Hop',
                 instructors: ['Noriko T Rovner'],
-                ages: 'Age5-9',
+                ages: 'Age 5 - 9',
                 days: ['Fri.'],
-                hours: ['5:00-6:00pm'],
+                hours: ['5:00 - 6:00pm'],
               },
               {
                 name: 'Hip-Hop',
                 instructors: ['Jocel Taylor'],
-                ages: 'Age8-Adult',
+                ages: 'Age 8 - Adult',
                 days: ['Sun.'],
-                hours: ['9:00-10:00am'],
+                hours: ['9:00 - 10:00am'],
               },
             ],
           },
@@ -88,23 +135,23 @@
             image: "../static/img/ballet-class.jpg",
             category: 'ballet',
             instructors: ['Megumi Riel', 'Katy Sun', 'Lina'],
-            ages: 'Age3-10',
+            ages: 'Age 3 - 10',
             address: 'Harmony Club, 1777 Saratoga Ave., San Jose',
             description: 'blur blur blur',
             subclasses: [
               {
                 name: 'Mini Ballet',
                 instructors: ['Megumi Riel'],
-                ages: 'Age3-5',
+                ages: 'Age 3 - 5',
                 days: ['Wed.'],
-                hours: ['3:20-4:20pm'],
+                hours: ['3:20 - 4:20pm'],
               },
               {
                 name: 'Petite Ballet',
                 instructors: ['Megumi Riel'],
-                ages: 'Age6-10',
+                ages: 'Age 6 - 10',
                 days: ['Wed.'],
-                hours: ['4:30-6:00pm'],
+                hours: ['4:30 - 6:00pm'],
               },
             ],
           },
@@ -113,23 +160,23 @@
             image: "../static/img/ballet-class.jpg",
             category: 'jazz',
             instructors: ['Noriko T Rovner'],
-            ages: 'Age5-Adult',
+            ages: 'Age 5 - Adult',
             address: 'Akiyama Wellness Center, 110 Jackson St., San Jose',
             description: 'blur blur blur',
             subclasses: [
               {
                 name: 'Jazz Funk',
                 instructors: ['Noriko T Rovner'],
-                ages: 'Age7-Adult',
+                ages: 'Age 7 - Adult',
                 days: ['Sat.'],
-                hours: ['12:10-1:10pm'],
+                hours: ['12:10 - 1:10pm'],
               },
               {
                 name: 'Jazz Ballet + Ballet Technique',
                 instructors: ['Noriko T Rovner'],
-                ages: 'Age5-8',
+                ages: 'Age 5 - 8',
                 days: ['Sat.'],
-                hours: ['1:15-2:45pm'],
+                hours: ['1:15 - 2:45pm'],
               },
             ],
           },
@@ -138,16 +185,16 @@
             image: "../static/img/hothura-class.JPG",
             category: 'fitness',
             instructors: ['Noriko T Rovner'],
-            ages: 'Age7-Adult',
+            ages: 'Age 7 - Adult',
             address: 'Harmony Club, 1777 Saratoga Ave., San Jose',
             description: 'blur blur blur',
             subclasses: [
               {
                 name: 'Hot Hula Fitness',
                 instructors: ['Noriko T Rovner'],
-                ages: 'Age7-Adult',
+                ages: 'Age 7 - Adult',
                 days: ['Sun.'],
-                hours: ['8:00-9:00am'],
+                hours: ['8:00 - 9:00am'],
               },
             ],
           },
@@ -165,14 +212,14 @@
                 instructors: ['Noriko T Rovner'],
                 ages: 'Any ages',
                 days: ['Mon.', 'Fri.'],
-                hours: ['10:00-11:00a', '9:00-10:00am'],
+                hours: ['10:00 - 11:00a', '9:00 - 10:00am'],
               },
               {
                 name: 'Hip-Hop Gold',
                 instructors: ['Noriko T Rovner'],
                 ages: 'Any ages',
                 days: ['Mon.'],
-                hours: ['11:00-12:00pm'],
+                hours: ['11:00 - 12:00pm'],
               },
             ],
           },

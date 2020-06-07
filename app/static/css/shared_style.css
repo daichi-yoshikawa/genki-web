@@ -19,12 +19,54 @@ ul {
 
 a {
     color: var(--main-a-color);
+    outline: var(--a-outline);
 }
 a:hover {
     color: var(--main-a-hover-color);
     text-decoration: none;
 }
 
+.no-margin {
+    margin: 0;
+}
+.no-x-margin {
+    margin-right: 0;
+    margin-left: 0;
+}
+.no-y-margin {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.margin-xl {
+    margin: 4rem;
+}
+.margin-lg {
+    margin: 2rem;
+}
+.margin {
+    margin: 1rem;
+}
+.margin-md {
+    margin: 1rem;
+}
+.margin-sm {
+    margin: 0.6rem;
+}
+.margin-xs {
+    margin: 0.3rem;
+}
+
+.no-padding {
+    padding: 0;
+}
+.no-x-padding {
+    padding-right: 0;
+    padding-left: 0;
+}
+.no-y-padding {
+    padding-top: 0;
+    padding-bottom: 0;
+}
 .padding-xl {
     padding: 5rem;
 }
@@ -78,6 +120,12 @@ footer .ss-footer-fa-default {
     color: var(--github-color);
 }
 
+.navbar {
+    background-color: var(--nav-background-color);
+}
+.navbar-toggler-icon {
+    outline: 0;
+}
 nav .nav-logo {
     height: var(--nav-logo-height);
 }
@@ -86,12 +134,12 @@ nav .nav-logo-text {
     font-family: var(--nav-logo-text-font-family);
 }
 .nav-item {
-    color: var(--main-color);
+    color: var(--nav-item-color);
     font-size: var(--nav-item-font-size);
     font-weight: var(--nav-item-weight);
 }
 .nav-item .ss-nav-item-side-bar-effect {
-    color: var(--main-color);
+    color: var(--nav-item-color);
     display: inline-block;
 }
 .nav-item .ss-nav-item-side-bar-effect::after {
@@ -132,32 +180,73 @@ nav .nav-logo-text {
     position: absolute;
 }
 
+.ss-vcentered {
+    vertical-align: middle;
+}
+.ss-div-h-centered {
+    display: table;
+    margin: 0 auto;
+    border 1px solid black;
+}
+
+/* Usage Example: 
+   <span>Learn More</span>
+   <a class="ss-accordion-toggle collapsed ml-2" data-toggle="collapse"
+    href="#collapse-example"></a>
+*/
+.ss-accordion-toggle {
+    font-family: var(--accordion-toggle-font-family);
+    font-size: var(--accordion-toggle-font-size);
+    vertical-align: var(--accordion-toggle-vertical-align);
+}
+.ss-accordion-toggle.collapsed:after {
+    color: var(--accordion-toggle-collapsed-color);
+    content: var(--accordion-toggle-collapsed-content);
+}
+.ss-accordion-toggle:after {
+    color: var(--accordion-toggle-color);
+    content: var(--accordion-toggle-content);
+}
+.ss-accordion-toggle-text {
+    font-family: var(--accordion-toggle-text-font-family);
+    font-size: var(--accordion-toggle-text-font-size);
+}
+
+
+
 /* fade */
 .ss-fadein {
     opacity: 0;
     transform: translate(0, 0);
-    transition: var(--fadein-to-top-transition);
+    transition: var(--fadein-transition);
 }
 .ss-fadein-to-top {
     opacity: 0;
     transform: translate(0, var(--fadein-to-top-translate));
-    transition: var(--fadein-to-top-transition);
+    transition: var(--fadein-transition);
 }
 .ss-fadein-to-bottom {
     opacity: 0;
     transform: translate(0, var(--fadein-to-bottom-translate));
-    transition: var(--fadein-to-bottom-transition);
+    transition: var(--fadein-transition);
 }
 .ss-fadein-to-right {
     opacity: 0;
     transform: translate(var(--fadein-to-right-translate), 0);
-    transition: var(--fadein-to-right-transition);
+    transition: var(--fadein-transition);
 }
 .ss-fadein-to-left {
     opacity: 0;
     transform: translate(var(--fadein-to-left-translate), 0);
-    transition: var(--fadein-to-left-transition);
+    transition: var(--fadein-transition);
 }
+.ss-fadein-slow {
+    transition: var(--fadein-transition-slow);
+}
+.ss-fadein-very-slow {
+    transition: var(--fadein-transition-very-slow);
+}
+
 .ss-fadein.effect-scroll,
 .ss-fadein-to-top.effect-scroll,
 .ss-fadein-to-bottom.effect-scroll,
@@ -204,49 +293,49 @@ nav .nav-logo-text {
 
 /* shadow */
 .ss-box-shadow-xs {
-    box-shadow: 0px 0px 4px;
+    box-shadow: 0px 0px 4px var(--box-shadow-color);
 }
 .ss-box-shadow-sm {
-    box-shadow: 0px 0px 5px;
+    box-shadow: 0px 0px 5px var(--box-shadow-color);
 }
 .ss-box-shadow-md {
-    box-shadow: 0px 0px 8px;
+    box-shadow: 0px 0px 8px var(--box-shadow-color);
 }
 .ss-box-shadow-lg {
-    box-shadow: 0px 0px 12px;
+    box-shadow: 0px 0px 12px var(--box-shadow-color);
 }
 .ss-box-shadow-xl {
-    box-shadow: 0px 0px 20px;
+    box-shadow: 0px 0px 20px var(--box-shadow-color);
 }
 .ss-box-shadow-xs-to-bottom-right {
-    box-shadow: 1px 1px 4px;
+    box-shadow: 1px 1px 4px var(--box-shadow-color);
 }
 .ss-box-shadow-sm-to-bottom-right {
-    box-shadow: 2px 2px 5px;
+    box-shadow: 2px 2px 5px var(--box-shadow-color);
 }
 .ss-box-shadow-md-to-bottom-right {
-    box-shadow: 4px 4px 8px;
+    box-shadow: 4px 4px 8px var(--box-shadow-color);
 }
 .ss-box-shadow-lg-to-bottom-right {
-    box-shadow: 6px 6px 12px;
+    box-shadow: 6px 6px 12px var(--box-shadow-color);
 }
 .ss-box-shadow-xl-to-bottom-right {
-    box-shadow: 8px 8px 20px;
+    box-shadow: 8px 8px 20px var(--box-shadow-color);
 }
 .ss-box-shadow-xs-to-bottom-left {
-    box-shadow: -1px 1px 4px;
+    box-shadow: -1px 1px 4px var(--box-shadow-color);
 }
 .ss-box-shadow-sm-to-bottom-left {
-    box-shadow: -2px 2px 5px;
+    box-shadow: -2px 2px 5px var(--box-shadow-color);
 }
 .ss-box-shadow-md-to-bottom-left {
-    box-shadow: -4px 4px 8px;
+    box-shadow: -4px 4px 8px var(--box-shadow-color);
 }
 .ss-box-shadow-lg-to-bottom-left {
-    box-shadow: -6px 6px 12px;
+    box-shadow: -6px 6px 12px var(--box-shadow-color);
 }
 .ss-box-shadow-xl-to-bottom-left {
-    box-shadow: -8px 8px 20px;
+    box-shadow: -8px 8px 20px var(--box-shadow-color);
 }
 
 /* Images */

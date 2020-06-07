@@ -12,24 +12,28 @@
     --main-effect-color: #fec400;
     --main-effect-color-md-opacity: rgba(254, 196, 0, .5);
     --main-effect-color-sm-opacity: rgba(254, 196, 0, .2);
-    --main-background-color: rgba(255, 165, 0, .15);
+    --main-first-background-color: rgba(255, 165, 0, .15);
+    --main-second-background-color: rgba(255, 165, 0, .75);
     --first-accent-color: rgba(255, 165, 0, 1);
-    --second-accent-color: rgba(180, 32, 0, 1);
+    --second-accent-color: rgba(180, 32, 0, .5);
     --bright-accent-color: rgba(254, 196, 0, .5);
-    --dark-acccent-color: rgba(255, 69, 0, 1);
+    --dark-accent-color: rgba(255, 69, 0, 1);
     --a-font-color: #020202;
+    --a-outline: 0; /* 0, 2px dashed black, etc. */
     --ul-padding-left: 0;
-    --footer-background-color: #dddddd;
+    --footer-background-color: #333333;
     --footer-color: #707070;
     --footer-h1-font-size: 1.2rem;
     --footer-h1-font-weight: none;
     --footer-fa-font-size: 30px;
     --footer-fa-vertical-align: middle;
+    --nav-background-color: #333333;
     --nav-logo-height: 40px;
     --nav-logo-text-font-size: 1.4rem;
     --nav-logo-text-font-family: 'Lato';/*Arial, Helvetica, sans-serif;*/
+    --nav-item-color: #d5d5d5;
     --nav-item-font-size: 1.2rem;
-    --nav-item-weight: none;
+    --nav-item-weight: bold;
     --nav-item-side-bar-effect-thickness: 4px;
     --nav-item-side-bar-effect-transition: 0.2s;
     --facebook-color: #1877f2;
@@ -44,10 +48,8 @@
     --fadein-to-right-translate: -400px;
     --fadein-to-left-translate: 400px;
     --fadein-transition: 1.0s;
-    --fadein-to-top-transition: 1.0s;
-    --fadein-to-bottom-transition: 1.0s;
-    --fadein-to-right-transition: 1.0s;
-    --fadein-to-left-transition: 1.0s;
+    --fadein-transition-slow: 2.0s;
+    --fadein-transition-very-slow: 5.0s;
 
     /* hover */
     /* Usage : add ss-hover-zoom and ss-hover-zoom-xx */
@@ -59,6 +61,19 @@
     --hover-zoom-xl-scale: 1.5;
 
     /* shadow */
+    --box-shadow-color: #555555;
 
     /* Images */
+
+    /* icon */
+    --accordion-toggle-font-family: 'FontAwesome';
+    --accordion-toggle-collapsed-content: '\f101';
+    --accordion-toggle-content: '\f103';
+    --accordion-toggle-font-size: 1.2rem;
+    --accordion-toggle-font-weight: bold;
+    --accordion-toggle-collapsed-color: var(--second-accent-color);
+    --accordion-toggle-color: var(--second-accent-color);
+    --accordion-toggle-vertical-align: middle;
+    --accordion-toggle-text-font-family: var(--main-font-family);
+    --accordion-toggle-text-font-size: var(--main-font-size);
 }
