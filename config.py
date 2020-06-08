@@ -1,13 +1,8 @@
 import os
 
-
-APP_NAME = 'GENKI'
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 
-
 class Config:
-    SECRET_KEY = os.environ.get(f'{APP_NAME}_SECRET_KEY')
-
     @staticmethod
     def init_app(app):
         pass
@@ -15,6 +10,7 @@ class Config:
 
 class DevelopmentConfig(Config):
     DEBUG = True
+    SECRET_KEY = os.environ.get('development_config_secret_key')
 
 
 class TestingConfig(Config):
@@ -22,7 +18,8 @@ class TestingConfig(Config):
 
 
 class ProductionConfig(Config):
-    pass
+    DEBUG = False
+    SECRET_KEY = os.environ.get(f'FLASK_SECRET_KEY')
 
 
 config = {
