@@ -2,7 +2,7 @@
 <script type="text/x-template" id="contacts--content">
 <div id="contacts-page">
   <div class="page-title-bar-container ss-rel-pos">
-    <img src="../static/img/placeholder.png" class="ss-overlayed-filling-img">
+    <img src="../static/img/placeholder.png" class="ss-overlayed-filling-img" :alt="alts['header-img']">
     <div class="text-center ss-container-on-overlayed-img">
       <h1 class="display-4">Contacts</h1>
     </div>
@@ -12,7 +12,7 @@
     <div class="row padding">
       <div class="col-lg-6 col-md-12 my-auto text-wrap mx-auto">
         <div class="ss-div-h-centered ss-fadein ss-fadein-slow">
-          <h1 class="section-main-header">Don't Miss a Free Trial Lesson!</h1>
+          <h1 class="section-main-header">Try Us For Free!</h1>
           <hr>
           <div class="mt-4 mb-4">
             <p>
@@ -46,6 +46,9 @@
     template: "#contacts--content",
     data: function() {
       return {
+        alts: {
+          'header-img': "Be free to contact us and try our free lesson!ぜひ無料体験レッスンにお越し下さい。日本語対応も可能です。",
+        },
         message: 'genkicrewdanceschool@gmail.com',
       };
     },

@@ -2,7 +2,7 @@
 <script type="text/x-template" id="instructors--content">
 <div id="instructors-page">
   <div class="page-title-bar-container ss-rel-pos">
-    <img src="../static/img/placeholder.png" class="ss-overlayed-filling-img">
+    <img src="../static/img/placeholder.png" class="ss-overlayed-filling-img" title="Photo by Javier Allegue Barros on Unsplash" :alt="alts['header-img']">
     <div class="text-center ss-container-on-overlayed-img">
       <h1 class="display-4">Instructors</h1>
     </div>
@@ -16,7 +16,7 @@
           <div class="row">
             <div class="col-sm-6 col-xs-12">
               <div class="pr-3 pl-3">
-                <img class="float-right ss-box-shadow-lg ss-hover-zoom ss-hover-zoom-sm":src="instructor.img">
+                <img class="float-right ss-box-shadow-lg ss-hover-zoom ss-hover-zoom-sm" :src="instructor.img" :alt="instructor.alt">
               </div>
             </div>
             <div class="col-sm-6 col-xs-12 mt-auto instructor-panel">
@@ -38,7 +38,7 @@
 
       <ul class="carousel-indicators">
         <template v-for="(instructor, i) in instructors" :key="i">
-        <li data-target="#custom-carousel-thumbnails" :data-slide-to="i" :class="{ 'active': i ===0 }"><div class="ss-hover-zoom ss-hover-zoom-md"><img :src="instructor.thumbnail"></div></li>
+        <li data-target="#custom-carousel-thumbnails" :data-slide-to="i" :class="{ 'active': i ===0 }"><div class="ss-hover-zoom ss-hover-zoom-md"><img :src="instructor.thumbnail" :alt="instructor.name"></div></li>
         </template>
       </ul>
 
@@ -53,12 +53,16 @@
     template: "#instructors--content",
     data: function () {
       return {
-        instructors : [
+        alts: {
+          'header-img': 'Great instructors teaching Hip-Hop, Ballet, Jazz, Fitness for kids and adults are at Genki Crew Dance School in San Jose(Sillicon Valley, Bayarea). サンノゼ(シリコンバレー、ベイエリア)発のGenki Crew Dance Schoolには、子供から大人を対象にヒップホップ、バレエ、ジャズ、フィットネスをコーチする素晴らしいダンサーが所属しています。',
+        },
+        instructors: [
           {
             name: 'Noriko T Rovner',
             title: 'Director of Genki Crew Dance School',
             classes: 'Hip-Hop, Jazz, Zumba',
             img: "../static/img/noriko.jpg",
+            alt: 'San Jose Japanese Dance Instructor, サンノゼ 日本人ダンスインストラクター',
             thumbnail: "../static/img/noriko.jpg",
             description: [
               'I was born and raised in Japan. My very first dance format was a Ballet. I transferred from Ballet to Jazz dance when I was 15 years-old. When I was in high school, Iparticipated in the high school dance team. During in that, I learned Hip-Hop, Jazz and contemporary. After came to US, I took Salsa lessons, and went to Cube and Guatemala to study Salsa.',
@@ -71,6 +75,7 @@
             title: 'Hip-Hop instructor',
             classes: 'Hip-Hop',
             img: "../static/img/joel.png",
+            alt: "San Jose Hiphop Dance Instructor, サンノゼ ヒップホップインストラクター",
             thumbnail: "../static/img/joel.png",
             description: [
               'I am passionate about dance and I have been blessed to learn Various dance styles such as jazz, ballet, Hip-Hop and Latin dance.',
@@ -82,6 +87,7 @@
             name: 'Megumi Riel',
             classes: 'Ballet',
             img: "../static/img/megumi.jpg",
+            alt: "San Jose Ballet Instructor, サンノゼ バレエインストラクター",
             thumbnail: "../static/img/megumi.jpg",
             description: [
               'My interest in dance began early.  At 3 years old I started classical ballet, which training continued regularly for nearly 20 years.  Leveraging ballet fundamentals, I was very fortunate to transition to ballroom style dance, including styles such as salsa, merengue, and mambo.  In 2011 I moved from Japan to California. It was then that I started focusing on new and exciting dance and fitness routines, and am currently a certified instructor for Nirvana, LaBlast Fitness, and Barre Above, and teach the same at the Akiyama Wellness Center in San Jose.  In 2016 I was honored to join LaBast SF Kainos, which worked hard as a team to earn a Gold Medal participating in the World Dance Contest during the 2017 Special Winter Olympics in Graz, Austria. Recently, I\'m learning ballroom dance from Mr.William Orrock. ',
@@ -92,6 +98,7 @@
             name: 'Katy Sun',
             classes: 'Ballet',
             img: "../static/img/katy.jpg",
+            alt: "San Jose Ballet Instructor, サンノゼ バレエインストラクター",
             thumbnail: "../static/img/katy.jpg",
             description: [
               'I am a Chinese who born and raised in Japan. I have been dancing over fifteen years. I started to dance Jazz dance when I was three and started to dance ballet at age of seven. Currently, I am studying early child development at a University. I was a assistant teacher at Tachibana Gakuin and I am doing that at Wakaba now. Also, I am volunteering at a preschool. I love children and communicate with people. I speak Japanese, Mandarin and English.',
@@ -101,6 +108,7 @@
             name: 'Lina',
             classes: 'Ballet',
             img: "../static/img/lina.png",
+            alt: "San Jose Ballet Voluntary Instructor, サンノゼ バレエボランティアインストラクター",
             thumbnail: "../static/img/lina.png",
             description: [
               'Hello , Everyone.',

@@ -8,21 +8,21 @@
     </ul>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img class="ss-fitting-img-top-focus" src="{{ url_for('static', filename='img/zumba.jpg') }}">
+        <img class="ss-fitting-img-top-focus" src="{{ url_for('static', filename='img/zumba.jpg') }}" :alt="alts['carousel-img0']">
         <div class="carousel-caption">
           <h1 class="display-2">Genki Crew Dance School</h1>
           <p class="text-center">Don't Think, Just Dance.</p>
         </div>
       </div>
       <div class="carousel-item">
-        <img class="ss-fitting-img-center-focus" src="{{ url_for('static', filename='img/minihiphop-christmas.jpg') }}">
+        <img class="ss-fitting-img-center-focus" src="{{ url_for('static', filename='img/minihiphop-christmas.jpg') }}" :alt="alts['carousel-img1']">
         <div class="carousel-caption">
           <h1 class="display-2">Online Class is Available</h1>
           <p class="lead text-center">Kids, Adults, and Senior classes are ready.</p>
         </div>
       </div>
       <div class="carousel-item">
-        <img class="ss-fitting-img-center-focus" src="{{ url_for('static', filename='img/festival.jpg') }}">
+        <img class="ss-fitting-img-center-focus" src="{{ url_for('static', filename='img/festival.jpg') }}" :alt="alts['carousel-img2']">
         <div class="carousel-caption">
           <h1 class="display-2">Perform at Events</h1>
           <p class="lead text-center">Japan Festivals, Christmas, etc.</p>
@@ -101,6 +101,11 @@
     template: "#index--content",
     data: function () {
       return {
+        alts: {
+          'carousel-img0': "Sillicon Valley/Bayarea Dance School, HipHop, Ballet, Jazz, and Fitness. シリコンバレー、ベイエリアのダンススクール(ヒップホップ、バレエ、ジャズ、フィットネス)",
+          'carousel-img1': "Online zoom dance class is offered. Zoomを使ったオンラインクラスもあります。",
+          'carousel-img2': "Live in San Jose, Campbell, Cupertino, Santa Clara, Sunnyvale, Mountain View, anywhere in Bayarea? Let's dance together! サンノゼ、キャンベル、クパチーノ、サンタクララ、サニーベール、マウンテンビュー等、ベイエリアにお住まいの方はぜひお越し下さい！",
+        },
         classes: [
           {
             name: 'Hip-Hop',

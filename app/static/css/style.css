@@ -10,6 +10,11 @@
     background-image: linear-gradient(147deg, var(--main-first-background-color) 0%, var(--main-second-background-color) 74%);
 }
 
+img {
+    text-indent: 100%;
+    overflow: hidden;
+}
+
 footer hr {
     padding-top: 0;
     margin-top: 0;
@@ -55,9 +60,16 @@ footer hr {
 .fa-ticket-alt {
     color: var(--main-color);
 }
+
+/* TODO: Not working with chrome. */
 .fa-ticket-alt.free-ticket {
-    color: black;
-    rotate: 120deg;
+    display: inline-block;
+    color: var(--main-color);
+    transform: rotate(120deg);
+    -webkit-transform: rotate(120deg);
+    -moz-transform: rotate(120deg);
+    -ms-transform: rotate(120deg);
+    -o-transform: rotate(120deg);
 }
 
 /* index.html */
@@ -78,20 +90,14 @@ footer hr {
 }
 
 #index-page .bg-container-1 {
+    background-image: linear-gradient(top, transparent 10%, var(--first-accent-color) 40%, var(--first-accent-color) 60%, transparent 90%);
+    background-image: -webkit-linear-gradient(top, transparent 10%, var(--first-accent-color) 40%, var(--first-accent-color) 60%, transparent 90%);
     background-image: -moz-linear-gradient(top, transparent 10%, var(--first-accent-color) 40%, var(--first-accent-color) 60%, transparent 90%);
-    /*
-    background-image: -webkit-linear-gradient(0, transparent 40%, var(--first-accent-color) 0%, var(--first-accent-color) 80%, transparent 0%);
-    background-image: -moz-linear-gradient(0, transparent 40%, var(--first-accent-color) 0%, var(--first-accent-color) 80%, transparent 0%);
-    background-image: linear-gradient(0, transparent 40%, var(--first-accent-color) 0%, var(--first-accent-color) 80%, transparent 0%);
-    */
 }
 
 #index-page .bg-container-2 {
-    /*
-    background-image: -webkit-linear-gradient(0, transparent 40%, var(--first-accent-color) 0%, var(--first-accent-color) 80%, transparent 0%);
-    background-image: -moz-linear-gradient(0, transparent 40%, var(--first-accent-color) 0%, var(--first-accent-color) 80%, transparent 0%);
-    background-image: linear-gradient(0, transparent 40%, var(--first-accent-color) 0%, var(--first-accent-color) 80%, transparent 0%);
-    */
+    background-image: linear-gradient(top, transparent 10%, var(--first-accent-color) 40%, var(--first-accent-color) 60%, transparent 90%);
+    background-image: -webkit-linear-gradient(top, transparent 10%, var(--first-accent-color) 40%, var(--first-accent-color) 60%, transparent 90%);
     background-image: -moz-linear-gradient(top, transparent 10%, var(--first-accent-color) 40%, var(--first-accent-color) 60%, transparent 90%);
 }
 
@@ -207,6 +213,7 @@ footer hr {
 }
 
 #custom-carousel-thumbnails .carousel-inner .bg-color-offset {
+    display: inline-block;
     background-image: linear-gradient(left, transparent 240px, var(--main-theme-color-sm-opacity) 240px, var(--main-theme-color-lg-opacity) 100%);
     background-image: -webkit-linear-gradient(left, transparent 240px, var(--main-theme-color-sm-opacity) 240px, var(--main-theme-color-lg-opacity) 100%);
     background-image: -moz-linear-gradient(left, transparent 240px, var(--main-theme-color-sm-opacity) 240px, var(--main-theme-color-lg-opacity) 100%);
