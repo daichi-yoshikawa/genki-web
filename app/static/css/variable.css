@@ -8,39 +8,44 @@
     --nav-item-font: Impact, Fantasy, 'Arial Black', Sans-serif;
     --email-font: 'Lucida Console', 'Lucida Sans Typewriter', 'Andale Mono', Consolas, 'Courier', 'Courier New', Monospace;
     --notation-font: var(--main-font);
-    --accordion-toggle-text-font: var(--main-font-family);
+    --accordion-toggle-text-font: var(--main-font);
 
     --main-width: 100%;
     --main-height: 100%;
     --main-container-width: 1400px;
-    --main-color: #333333;
-    --main-a-hover-color: #020202;
-    --main-a-color: #020202;
+    --main-color: #444444;
+    --main-a-hover-color: var(--main-color);
+    --main-a-color: var(--main-color);
     --main-font-size: medium;
     --main-font-weight: 100;
-    --main-effect-color: #fec400;
+    --main-theme-color: rgb(255, 200, 0); /* mango */
+    --main-theme-color-sm-opacity: rgba(255, 200, 0, .2); /* mango */
+    --main-theme-color-md-opacity: rgba(255, 200, 0, .5); /* mango */
+    --main-theme-color-lg-opacity: rgba(255, 200, 0, .75); /* mango */
+    --main-effect-color: rgb(79, 134, 247); /* blueberry */
     --main-effect-color-md-opacity: rgba(254, 196, 0, .5);
     --main-effect-color-sm-opacity: rgba(254, 196, 0, .2);
-    --main-first-background-color: rgba(255, 165, 0, .15);
-    --main-second-background-color: rgba(255, 165, 0, .75);
-    --first-accent-color: rgba(255, 165, 0, 1);
-    --second-accent-color: rgba(180, 32, 0, .5);
-    --bright-accent-color: rgba(254, 196, 0, .5);
-    --dark-accent-color: rgba(255, 69, 0, 1);
-    --a-font-color: #020202;
+    --main-first-background-color: rgba(155, 155, 0, .1);
+    --main-second-background-color: rgba(251, 236, 93, .75); /* corn */
+    --first-accent-color: var(--main-theme-color);
+    --second-accent-color: rgba(251, 236, 93, 1);
+    --bright-accent-color: rgba(255, 255, 0, .1);
+    --dark-accent-color: #EE7600; /* deep orange */
+    --a-font-color: var(--main-color);
     --a-outline: 0; /* 0, 2px dashed black, etc. */
     --ul-padding-left: 0;
-    --footer-background-color: #333333;
-    --footer-color: #707070;
+    --footer-background-color: var(--main-theme-color);
+    --footer-color: var(--main-color);
     --footer-h1-font-size: 1.2rem;
     --footer-h1-font-weight: none;
     --footer-fa-font-size: 30px;
     --footer-fa-vertical-align: middle;
-    --nav-background-color: #333333;
+    --nav-background-color: var(--main-theme-color);
     --nav-logo-height: 40px;
     --nav-logo-text-font-size: 1.4rem;
+    --nav-logo-text-color: var(--main-color);
 
-    --nav-item-color: #d5d5d5;
+    --nav-item-color: var(--main-color);
     --nav-item-font-size: 1.2rem;
     --nav-item-weight: bold;
     --nav-item-side-bar-effect-thickness: 4px;
@@ -71,17 +76,18 @@
 
     /* shadow */
     --box-shadow-color: #555555;
+    --text-shadow-color: #000;
 
     /* Images */
 
     /* icon */
     --accordion-toggle-font-family: 'FontAwesome';
-    --accordion-toggle-collapsed-content: '\f101';
-    --accordion-toggle-content: '\f103';
+    --accordion-toggle-collapsed-content: '\f0ab';
+    --accordion-toggle-content: '\f0aa';
     --accordion-toggle-font-size: 1.2rem;
     --accordion-toggle-font-weight: bold;
-    --accordion-toggle-collapsed-color: var(--second-accent-color);
-    --accordion-toggle-color: var(--second-accent-color);
+    --accordion-toggle-collapsed-color: var(--dark-accent-color);
+    --accordion-toggle-color: var(--dark-accent-color);
     --accordion-toggle-vertical-align: middle;
     --accordion-toggle-text-font-size: var(--main-font-size);
 }

@@ -20,10 +20,13 @@
                 </div>
                 <div class="col-md-6 col-sm-12 padding-xs">
                   <h3>{{ category.name }}</h3>
-                  <p>{{ category.ages }}</p>
-                  <p>{{ category.address }}</p>
+                  <p class="small"><u>{{ category.ages }}</u></p>
+                  <p class="small">
+                    <i class="far fa-building ss-vcentered mr-2"></i>{{ category.building }}<br>
+                    <i class="fas fa-map-marker-alt mr-2"></i>{{ category.address }}<br>
+                  </p>
                   <a class="ss-accordion-toggle collapsed" data-toggle="collapse" :href="'#collapse-class-cards-' + i">
-                    <span class="ss-accordion-toggle-text mr-2">Learn More</span>
+                    <span class="ss-accordion-toggle-text small font-weight-bold mr-2">Learn More</span>
                   </a>
                 </div>
                 <div class="col-12">
@@ -34,26 +37,32 @@
                         <div class="col-md-6 col-sm-12 no-padding">
                           <img class="ss-filling-img" src="../static/img/placeholder.png">
                         </div>
-                        <div class="col-md-6 col-sm-12 padding-xs">
+                        <div class="col-md-6 col-sm-12 padding-xs small">
                           <h4>{{ cls.name }}</h4>
-                          <span>{{ cls.ages }}</span><br>
+                          <p><u>{{ cls.ages }}</u></p>
+                          <i class="far fa-clock ss-vcentered mr-1"></i>
                           <template v-for="(day, j) in cls.days" :key="j">
                           <span>{{ cls.hours[j] }} {{ day }}
                             <template v-if="j < cls.days.length - 1">,&nbsp;</template>
                             </template>
                           </span><br>
                           <template v-for="(instructor, j) in cls.instructors" :key="j">
-                          <span>{{ instructor }}
+                          <span><i class="far fa-user ss-vcentered mr-2"></i>{{ instructor }}
                             <template v-if="j < cls.instructors.length - 1">,&nbsp;</template>
                           </span><br>
-                          <span>{{ cls.fee }}</span>
+                          <span><i class="fas fa-ticket-alt mr-1"></i>{{ cls.fee }}</span>
                           <template v-if="cls.discount_fee !== ''">
-                          <br><span class="small">{{ cls.discount_fee }} with 10 lessons ticket</span>
+                          <br><span class="small notation-text font-weight-bold">{{ cls.discount_fee }} with 10 lessons ticket</span>
                           </template>
                         </div>
                       </div>
                     </div>
                     </template>
+                    <div class="mx-auto ss-div-h-centered mt-4 mb-3">
+                      <router-link to="/contacts/#">
+                        <button class="btn btn-primary btn-sm font-weight-bold">Interested in Free Trial</button>
+                      </router-link>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -64,43 +73,6 @@
       {% endraw %}
     </div>
   </div>
-
-  <!--
-  <div class="container classes-intro-page">
-    <div class="row">
-      {% raw %}
-      <template v-for="(cls, i) in classes" :key="i">
-        <div class="col-sm-6 col-xs-12 mt-5">
-          <div class="class-intro-img-wrapper">
-            <img class="ss-overlayed-filling-img" style="max-height: 400px;" :src="cls.image">
-            <div class="custom-container-on-overlayed-img">
-              <router-link :to="{ path: '/classes/' + cls.category }">
-                <span class="btn btn-primary btn-circle">Learn More</span>
-              </router-link>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-xs-12 mt-5 pl-5 my-auto">
-          <h3>{{ cls.name }}</h3>
-          <p>{{ cls.description }}</p>
-          <ul>
-            <li>
-              <span>
-                <template v-for="(name, j) in cls.instructors" :key="j">
-                  {{ name }}
-                  <template v-if="j < cls.instructors.length-1">,&nbsp;</template>
-                </template>
-              </span>
-            </li>
-            <li><span>{{ cls.ages }}</span></li>
-            <li><span>{{ cls.address }}</span></li>
-          </ul>
-        </div>
-      </template>
-      {% endraw %}
-    </div>
-  </div>
-  -->
 </div>
 </script>
 
@@ -117,7 +89,8 @@
             category: 'hiphop',
             instructors: ['Noriko T Rovner', 'Jocel Taylor'],
             ages: 'Age 2 - Adult',
-            address: 'Harmony Club, 1777 Saratoga Ave., San Jose',
+            building: 'Harmony Club',
+            address: '1777 Saratoga Ave., San Jose',
             description: 'blur blur blur',
             classes: [
               {
@@ -155,7 +128,8 @@
             category: 'ballet',
             instructors: ['Megumi Riel', 'Katy Sun', 'Lina'],
             ages: 'Age 3 - 10',
-            address: 'Harmony Club, 1777 Saratoga Ave., San Jose',
+            building: 'Harmony Club',
+            address: '1777 Saratoga Ave., San Jose',
             description: 'blur blur blur',
             classes: [
               {
@@ -184,7 +158,8 @@
             category: 'jazz',
             instructors: ['Noriko T Rovner'],
             ages: 'Age 5 - Adult',
-            address: 'Akiyama Wellness Center, 110 Jackson St., San Jose',
+            building: 'Akiyama Wellness Center',
+            address: '110 Jackson St., San Jose',
             description: 'blur blur blur',
             classes: [
               {
@@ -213,7 +188,8 @@
             category: 'fitness',
             instructors: ['Noriko T Rovner'],
             ages: 'Age 7 - Adult',
-            address: 'Harmony Club, 1777 Saratoga Ave., San Jose',
+            building: 'Harmony Club',
+            address: '1777 Saratoga Ave., San Jose',
             description: 'blur blur blur',
             classes: [
               {
@@ -233,7 +209,8 @@
             category: 'senior',
             instructors: ['Noriko T Rovner'],
             ages: 'Any ages',
-            address: 'Akiyama Wellness Center, 110 Jackson St., San Jose',
+            building: 'Akiyama Wellness Center',
+            address: '110 Jackson St., San Jose',
             description: 'blur blur blur',
             classes: [
               {
