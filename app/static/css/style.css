@@ -135,6 +135,10 @@ footer hr {
     height: 320px;
 }
 
+#classes-page .class-category-panel .class-panel img {
+    height: 200px;
+}
+
 #classes-page .class-category-panel .class-panel h4 {
     font-family: var(--h1-font);
     font-size: 1rem;
