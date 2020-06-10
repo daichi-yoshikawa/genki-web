@@ -1,0 +1,724 @@
+/* Must be linked before linking other non-3rd party css files. */
+
+:root {
+    /* fonts */
+    /* Sans-serif, Helvetica, Arial, Fantasy */
+    --main-font: 'Open Sans', Robot, Helvetica, Arial, Sans-serif;
+    --nav-logo-text-font: Impact, Fantasy, 'Arial Black', Sans-serif;
+    --nav-item-font: Impact, Fantasy, 'Arial Black', Sans-serif;
+    --email-font: 'Lucida Console', 'Lucida Sans Typewriter', 'Andale Mono', Consolas, 'Courier', 'Courier New', Monospace;
+    --notation-font: var(--main-font);
+    --accordion-toggle-text-font: var(--main-font);
+
+    --main-width: 100%;
+    --main-height: 100%;
+    --main-container-width: 1400px;
+    --main-color: #444444;
+    --main-a-hover-color: var(--main-color);
+    --main-a-color: var(--main-color);
+    --main-font-size: medium;
+    --main-font-weight: 100;
+    --main-theme-color: rgb(255, 200, 0); /* mango */
+    --main-theme-color-sm-opacity: rgba(255, 200, 0, .2); /* mango */
+    --main-theme-color-md-opacity: rgba(255, 200, 0, .5); /* mango */
+    --main-theme-color-lg-opacity: rgba(255, 200, 0, .75); /* mango */
+    --main-effect-color: rgb(79, 134, 247); /* blueberry */
+    --main-effect-color-md-opacity: rgba(254, 196, 0, .5);
+    --main-effect-color-sm-opacity: rgba(254, 196, 0, .2);
+    --main-first-background-color: rgba(155, 155, 0, .1);
+    --main-second-background-color: rgba(251, 236, 93, .75); /* corn */
+    --first-accent-color: var(--main-theme-color);
+    --second-accent-color: rgba(251, 236, 93, 1);
+    --bright-accent-color: rgba(255, 255, 0, .1);
+    --dark-accent-color: #EE7600; /* deep orange */
+    --a-font-color: var(--main-color);
+    --a-outline: 0; /* 0, 2px dashed black, etc. */
+    --ul-padding-left: 0;
+    --footer-background-color: var(--main-theme-color);
+    --footer-color: var(--main-color);
+    --footer-h1-font-size: 1.2rem;
+    --footer-h1-font-weight: none;
+    --footer-fa-font-size: 30px;
+    --footer-fa-vertical-align: middle;
+    --nav-background-color: var(--main-theme-color);
+    --nav-logo-height: 40px;
+    --nav-logo-text-font-size: 1.4rem;
+    --nav-logo-text-color: var(--main-color);
+
+    --nav-item-color: var(--main-color);
+    --nav-item-font-size: 1.2rem;
+    --nav-item-weight: bold;
+    --nav-item-side-bar-effect-thickness: 4px;
+    --nav-item-side-bar-effect-transition: 0.2s;
+    --facebook-color: #1877f2;
+    --twitter-color: #1da1f2;
+    --youtube-color: #ff0000;
+    --linkedin-color: #007bb5;
+    --github-color: #000;
+
+    /* fade */
+    --fadein-to-top-translate: 400px;
+    --fadein-to-bottom-translate: -400px;
+    --fadein-to-right-translate: -400px;
+    --fadein-to-left-translate: 400px;
+    --fadein-transition: 1.0s;
+    --fadein-transition-slow: 2.0s;
+    --fadein-transition-very-slow: 5.0s;
+
+    /* hover */
+    /* Usage : add ss-hover-zoom and ss-hover-zoom-xx */
+    --hover-zoom-transition: 0.3s;
+    --hover-zoom-xs-scale: 1.02;
+    --hover-zoom-sm-scale: 1.05;
+    --hover-zoom-md-scale: 1.1;
+    --hover-zoom-lg-scale: 1.2;
+    --hover-zoom-xl-scale: 1.5;
+
+    /* shadow */
+    --box-shadow-color: #555555;
+    --text-shadow-color: #000;
+
+    /* Images */
+
+    /* icon */
+    --accordion-toggle-font-family: 'FontAwesome';
+    --accordion-toggle-collapsed-content: '\f0ab';
+    --accordion-toggle-content: '\f0aa';
+    --accordion-toggle-font-size: 1.2rem;
+    --accordion-toggle-font-weight: bold;
+    --accordion-toggle-collapsed-color: var(--dark-accent-color);
+    --accordion-toggle-color: var(--dark-accent-color);
+    --accordion-toggle-vertical-align: middle;
+    --accordion-toggle-text-font-size: var(--main-font-size);
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+html, body {
+    width: var(--main-width);
+    height: var(--main-height);
+    color: var(--main-color);
+    font-size: var(--main-font-size);
+    font-family: var(--main-font);
+    font-weight: var(--main-font-weight);
+}
+
+.container {
+    max-width: var(--main-container-width);
+}
+
+ul {
+    list-style: none;
+    padding-left: var(--ul-padding-left);
+}
+
+a {
+    color: var(--main-a-color);
+    outline: var(--a-outline);
+}
+a:hover {
+    color: var(--main-a-hover-color);
+    text-decoration: none;
+}
+
+.no-margin {
+    margin: 0;
+}
+.no-x-margin {
+    margin-right: 0;
+    margin-left: 0;
+}
+.no-y-margin {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.margin-xl {
+    margin: 4rem;
+}
+.margin-lg {
+    margin: 2rem;
+}
+.margin {
+    margin: 1rem;
+}
+.margin-md {
+    margin: 1rem;
+}
+.margin-sm {
+    margin: 0.6rem;
+}
+.margin-xs {
+    margin: 0.3rem;
+}
+
+.no-padding {
+    padding: 0;
+}
+.no-x-padding {
+    padding-right: 0;
+    padding-left: 0;
+}
+.no-y-padding {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.padding-xl {
+    padding: 5rem;
+}
+.padding-lg {
+    padding: 4rem;
+}
+.padding {
+    padding: 3rem;
+}
+.padding-md {
+    padding: 3rem;
+}
+.padding-sm {
+    padding: 2rem;
+}
+.padding-xs {
+    padding: 1rem;
+}
+
+footer h1 {
+    font-size: var(--footer-h1-font-size);
+    font-weight: var(--footer-h1-font-weight);
+}
+footer, footer a, footer a:hover {
+    color: var(--footer-color);
+    background-color: var(--footer-background-color);
+}
+footer .ss-copyright {
+    color: var(--footer-copyright-font-size);
+}
+footer .ss-footer-fa-default {
+    font-size: var(--footer-fa-font-size);
+    vertical-align: var(--footer-fa-vertical-align);
+}
+.fa-envelope.ss-fa-original-color {
+    color: #ffffff;
+}
+.fa-facebook.ss-fa-original-color {
+    color: var(--facebook-color);
+}
+.fa-twitter.ss-fa-original-color {
+    color: var(--twitter-color);
+}
+.fa-youtube.ss-fa-original-color {
+    color: var(--youtube-color);
+}
+.fa-linkedin.ss-fa-original-color {
+    color: var(--linkedin-color);
+}
+.fa-github.ss-fa-original-color {
+    color: var(--github-color);
+}
+
+.navbar {
+    background-color: var(--nav-background-color);
+}
+.navbar-toggler-icon {
+    outline: 0;
+    color: black;
+}
+nav .navbar-toggler {
+    outline: 0;
+}
+nav .nav-logo {
+    height: var(--nav-logo-height);
+}
+nav .nav-logo-text {
+    color: var(--nav-logo-text-color);
+    font-size: var(--nav-logo-text-font-size);
+    font-family: var(--nav-logo-text-font);
+}
+.nav-item {
+    color: var(--nav-item-color);
+    font-family: var(--nav-item-font);
+    font-size: var(--nav-item-font-size);
+    font-weight: var(--nav-item-weight);
+}
+.nav-item .ss-nav-item-side-bar-effect {
+    color: var(--nav-item-color);
+    display: inline-block;
+}
+.nav-item .ss-nav-item-side-bar-effect::after {
+    content: '';
+    display: block;
+    width: 0px;
+    height: var(--nav-item-side-bar-effect-thickness);
+    background: var(--main-effect-color);
+    transition: var(--nav-item-side-bar-effect-transition);
+}
+.nav-item .ss-nav-item-side-bar-effect:hover::after {
+    width: 100%;
+}
+
+.ss-border {
+    border: 1px solid #000;
+}
+.ss-black-border {
+    border: 1px solid #000;
+}
+.ss-red-border {
+    border: 1px solid #ff0000;
+}
+.ss-blue-border {
+    border: 1px solid #0000ff;
+}
+.ss-green-border {
+    border: 1px solid #007700;
+}
+.ss-yellow-border {
+    border: 1px solid #ffff00;
+}
+
+.ss-rel-pos {
+    position: relative;
+}
+.ss-abs-pos {
+    position: absolute;
+}
+
+.ss-vcentered {
+    vertical-align: middle;
+}
+.ss-div-h-centered {
+    display: table;
+    margin: 0 auto;
+}
+
+/* Usage Example: 
+   <span>Learn More</span>
+   <a class="ss-accordion-toggle collapsed ml-2" data-toggle="collapse"
+    href="#collapse-example"></a>
+*/
+.ss-accordion-toggle {
+    font-family: var(--accordion-toggle-font-family);
+    font-size: var(--accordion-toggle-font-size);
+    vertical-align: var(--accordion-toggle-vertical-align);
+}
+.ss-accordion-toggle.collapsed:after {
+    color: var(--accordion-toggle-collapsed-color);
+    content: var(--accordion-toggle-collapsed-content);
+}
+.ss-accordion-toggle:after {
+    color: var(--accordion-toggle-color);
+    content: var(--accordion-toggle-content);
+}
+.ss-accordion-toggle-text {
+    font-family: var(--accordion-toggle-text-font);
+    font-size: var(--accordion-toggle-text-font-size);
+}
+
+.email {
+    font-family: var(--email-font);
+}
+
+/* fade */
+.ss-fadein {
+    opacity: 0;
+    transform: translate(0, 0);
+    transition: var(--fadein-transition);
+}
+.ss-fadein-to-top {
+    opacity: 0;
+    transform: translate(0, var(--fadein-to-top-translate));
+    transition: var(--fadein-transition);
+}
+.ss-fadein-to-bottom {
+    opacity: 0;
+    transform: translate(0, var(--fadein-to-bottom-translate));
+    transition: var(--fadein-transition);
+}
+.ss-fadein-to-right {
+    opacity: 0;
+    transform: translate(var(--fadein-to-right-translate), 0);
+    transition: var(--fadein-transition);
+}
+.ss-fadein-to-left {
+    opacity: 0;
+    transform: translate(var(--fadein-to-left-translate), 0);
+    transition: var(--fadein-transition);
+}
+.ss-fadein-slow {
+    transition: var(--fadein-transition-slow);
+}
+.ss-fadein-very-slow {
+    transition: var(--fadein-transition-very-slow);
+}
+
+.ss-fadein.effect-scroll,
+.ss-fadein-to-top.effect-scroll,
+.ss-fadein-to-bottom.effect-scroll,
+.ss-fadein-to-right.effect-scroll,
+.ss-fadein-to-left.effect-scroll {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* iframe */
+.ss-responsive-iframe-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.ss-responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* hover effect */
+.ss-hover-zoom {
+    transition: transform var(--hover-zoom-transition);
+}
+.ss-hover-zoom.ss-hover-zoom-xs:hover {
+    transform: scale(var(--hover-zoom-xs-scale));
+}
+.ss-hover-zoom.ss-hover-zoom-sm:hover {
+    transform: scale(var(--hover-zoom-sm-scale));
+}
+.ss-hover-zoom.ss-hover-zoom-md:hover {
+    transform: scale(var(--hover-zoom-md-scale));
+}
+.ss-hover-zoom.ss-hover-zoom-lg:hover {
+    transform: scale(var(--hover-zoom-lg-scale));
+}
+.ss-hover-zoom.ss-hover-zoom-xl:hover {
+    transform: scale(var(--hover-zoom-xl-scale));
+}
+
+
+/* shadow */
+.ss-box-shadow-xs {
+    box-shadow: 0px 0px 4px var(--box-shadow-color);
+}
+.ss-box-shadow-sm {
+    box-shadow: 0px 0px 5px var(--box-shadow-color);
+}
+.ss-box-shadow-md {
+    box-shadow: 0px 0px 8px var(--box-shadow-color);
+}
+.ss-box-shadow-lg {
+    box-shadow: 0px 0px 12px var(--box-shadow-color);
+}
+.ss-box-shadow-xl {
+    box-shadow: 0px 0px 20px var(--box-shadow-color);
+}
+.ss-box-shadow-xs-to-bottom-right {
+    box-shadow: 1px 1px 4px var(--box-shadow-color);
+}
+.ss-box-shadow-sm-to-bottom-right {
+    box-shadow: 2px 2px 5px var(--box-shadow-color);
+}
+.ss-box-shadow-md-to-bottom-right {
+    box-shadow: 4px 4px 8px var(--box-shadow-color);
+}
+.ss-box-shadow-lg-to-bottom-right {
+    box-shadow: 6px 6px 12px var(--box-shadow-color);
+}
+.ss-box-shadow-xl-to-bottom-right {
+    box-shadow: 8px 8px 20px var(--box-shadow-color);
+}
+.ss-box-shadow-xs-to-bottom-left {
+    box-shadow: -1px 1px 4px var(--box-shadow-color);
+}
+.ss-box-shadow-sm-to-bottom-left {
+    box-shadow: -2px 2px 5px var(--box-shadow-color);
+}
+.ss-box-shadow-md-to-bottom-left {
+    box-shadow: -4px 4px 8px var(--box-shadow-color);
+}
+.ss-box-shadow-lg-to-bottom-left {
+    box-shadow: -6px 6px 12px var(--box-shadow-color);
+}
+.ss-box-shadow-xl-to-bottom-left {
+    box-shadow: -8px 8px 20px var(--box-shadow-color);
+}
+
+/* Images */
+.ss-filling-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ss-overlayed-filling-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ss-container-on-overlayed-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+/* carousel */
+.carousel-item .ss-fitting-img-top-focus {
+    width: 100%;
+    object-fit: cover;
+    object-position: 0 0;
+}
+
+.carousel-item .ss-fitting-img-center-focus {
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.carousel-item .ss-fitting-img-bottom-focus {
+    width: 100%;
+    object-fit: cover;
+    object-position: 100% 100%;
+}
+
+
+
+:root {
+    --h1-font: Impact, Fantasy, 'Arial Black', Sans-serif;
+    --h1-color: #333333;
+    --h2-font: 'Verdana', 'Tahoma', 'Arial Black', Sans-serif;
+    --h2-color: #666666;;
+}
+
+#app {
+    background-color: var(--main-first-background-color);
+    background-image: linear-gradient(147deg, var(--main-first-background-color) 0%, var(--main-second-background-color) 74%);
+}
+
+img {
+    text-indent: 100%;
+    overflow: hidden;
+}
+
+footer hr {
+    padding-top: 0;
+    margin-top: 0;
+    width: 75%;
+}
+
+.section-main-header {
+    color: var(--h1-color);
+    font-family: var(--h1-font);
+    font-size: 2.4rem;
+ }
+.section-sub-header {
+    color: var(--h2-color);
+    font-family: var(--h2-font);
+    font-size: 1.6rem;
+}
+.section-special-header {
+    font-size: 1.2rem;
+}
+
+.notation-text {
+    color: var(--dark-accent-color);
+}
+
+.page-title-bar-container {
+    width: 100%;
+    height: 240px;
+}
+.page-title-bar-container h1 {
+    font-family: var(--h1-font);
+}
+
+.contact-us hr {
+    width: 75%;
+}
+
+.fa-envelope {
+    color: var(--main-color);
+}
+.fa-map-marker-alt {
+    color: var(--main-color);
+}
+.fa-ticket-alt {
+    color: var(--main-color);
+}
+
+/* TODO: Not working with chrome. */
+.fa-ticket-alt.free-ticket {
+    display: inline-block;
+    color: var(--main-color);
+    transform: rotate(120deg);
+    -webkit-transform: rotate(120deg);
+    -moz-transform: rotate(120deg);
+    -ms-transform: rotate(120deg);
+    -o-transform: rotate(120deg);
+}
+
+/* index.html */
+#index-page #custom-carousel-main .carousel-caption h1 {
+    font-family: Impact, Fantasy, 'Arial Black', Sans-serif;
+    text-shadow: 0 0 12px var(--text-shadow-color);
+}
+
+#index-page #custom-carousel-main .carousel-caption p {
+    font-family: 'Verdana', 'Tahoma', 'Arial Black', Sans-serif;
+    font-size: 2.0rem;
+    font-weight: bold;
+    text-shadow: 0 0 6px var(--text-shadow-color);
+}
+
+#index-page #custom-carousel-main .carousel-item img {
+    max-height: 640px;
+}
+
+#index-page .bg-container-1 {
+    background-image: linear-gradient(top, transparent 10%, var(--first-accent-color) 40%, var(--first-accent-color) 60%, transparent 90%);
+    background-image: -webkit-linear-gradient(top, transparent 10%, var(--first-accent-color) 40%, var(--first-accent-color) 60%, transparent 90%);
+    background-image: -moz-linear-gradient(top, transparent 10%, var(--first-accent-color) 40%, var(--first-accent-color) 60%, transparent 90%);
+}
+
+#index-page .bg-container-2 {
+    background-image: linear-gradient(top, transparent 10%, var(--first-accent-color) 40%, var(--first-accent-color) 60%, transparent 90%);
+    background-image: -webkit-linear-gradient(top, transparent 10%, var(--first-accent-color) 40%, var(--first-accent-color) 60%, transparent 90%);
+    background-image: -moz-linear-gradient(top, transparent 10%, var(--first-accent-color) 40%, var(--first-accent-color) 60%, transparent 90%);
+}
+
+#index-page .class-panels {
+    width: 576px;
+}
+
+#index-page .class-panels .class-panel-img-container {
+    width: 100%;
+    height: 200px;
+}
+
+#index-page .class-panels .class-panel-img-thin-container {
+    width: 100%;
+    height: 160px;
+}
+
+/* classes.html */
+#classes-page .class-category-panel h3 {
+    font-family: var(--h1-font);
+}
+
+#classes-page .custom-container-on-overlayed-img {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+#classes-page .class-category-panel {
+    background-color: var(--main-theme-color-sm-opacity);
+}
+
+#classes-page .class-category-panel .class-panel {
+    background-color: var(--main-theme-color-md-opacity);
+}
+
+#classes-page .class-category-panel img {
+    height: 320px;
+}
+
+#classes-page .class-category-panel .class-panel img {
+    height: 200px;
+}
+
+#classes-page .class-category-panel .class-panel h4 {
+    font-family: var(--h1-font);
+    font-size: 1rem;
+}
+
+#classes-page .class-category-panel .btn-primary {
+    padding: 4px 40px;
+    border-radius: 16px;
+    background-color: var(--main-effect-color);
+    border: 0;
+}
+
+#classes-page .class-category-panel .btn-primary:hover {
+    background-color: var(--dark-accent-color);
+    border: 0;
+}
+
+/* instructors.html */
+#instructors-page .instructor-title {
+    font-family: var(--h1-font);
+    color: var(--dark-accent-color);
+}
+
+#custom-carousel-thumbnails .carousel-item {
+    transition: 0.7s;
+}
+
+#custom-carousel-thumbnails .carousel-item img {
+    width: 100%;
+    height: 480px;
+    max-width: 576px;
+    object-fit: cover;
+    object-position: 50% 0;
+}
+
+#custom-carousel-thumbnails .carousel-indicators {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#custom-carousel-thumbnails .carousel-indicators div {
+    background-color: #fff;
+}
+
+#custom-carousel-thumbnails .offset-to-push-out-thumbnails {
+    height: 160px;
+}
+
+#custom-carousel-thumbnails .carousel-indicators li {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+#custom-carousel-thumbnails .carousel-indicators div {
+    width: 100%;
+    height: 100%;
+}
+
+#custom-carousel-thumbnails .carousel-indicators img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 0;
+}
+
+#custom-carousel-thumbnails .carousel-inner .bg-color-offset {
+    display: inline-block;
+    background-image: linear-gradient(left, transparent 240px, var(--main-theme-color-sm-opacity) 240px, var(--main-theme-color-lg-opacity) 100%);
+    background-image: -webkit-linear-gradient(left, transparent 240px, var(--main-theme-color-sm-opacity) 240px, var(--main-theme-color-lg-opacity) 100%);
+    background-image: -moz-linear-gradient(left, transparent 240px, var(--main-theme-color-sm-opacity) 240px, var(--main-theme-color-lg-opacity) 100%);
+    width: 100%;
+}
+
+/* contacts.html width="640" height="480"*/
+#contacts-page .google-map-container {
+    width: 100%;
+    height: 100%;
+    min-height: 480px;
+}
+
+/* media query */
+@media (max-width: 576px) {
+    #index-page .class-panels {
+        width: 100%;
+    }
+    #index-page .class-panels .class-panel-img-thin-container {
+        height: 200px;
+    }
+}
