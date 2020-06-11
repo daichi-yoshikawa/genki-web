@@ -3,6 +3,7 @@
     --h1-color: #333333;
     --h2-font: 'Verdana', 'Tahoma', 'Arial Black', Sans-serif;
     --h2-color: #666666;;
+    --placeholder-font-size: 0.8rem;
 }
 
 #app {
@@ -13,6 +14,44 @@
 img {
     text-indent: 100%;
     overflow: hidden;
+}
+
+input.form-control {
+    border: 0;
+    border-bottom: 1px solid var(--first-accent-color);
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: none;
+}
+input.form-control:focus {
+    border: 0;
+    border-bottom: 0;
+    border-radius: 0;
+    background-color: var(--main-theme-color-sm-opacity);
+    box-shadow: none;
+}
+::placeholder {
+    font-size: var(--placeholder-font-size);
+}
+::-webkit-input-placeholder {
+    font-size: var(--placeholder-font-size);
+}
+::-moz-placeholder {
+    font-size: var(--placeholder-font-size);
+}
+:-moz-placeholder {
+    font-size: var(--placeholder-font-size);
+}
+textarea {
+    border: 1px solid var(--first-accent-color);
+    background-color: transparent;
+    width: 100%;
+    height: 160px;
+    resize: none;
+}
+textarea:focus {
+    border: 0;
+    background-color: var(--main-theme-color-sm-opacity);
 }
 
 footer hr {
@@ -44,7 +83,12 @@ footer hr {
     height: 240px;
 }
 .page-title-bar-container h1 {
+    color: #333333;
     font-family: var(--h1-font);
+    text-shadow: 0 0 12px white;
+}
+.page-title-bar-container img {
+    opacity: 0.75;
 }
 
 .contact-us hr {
@@ -153,13 +197,15 @@ footer hr {
 #classes-page .class-category-panel .btn-primary {
     padding: 4px 40px;
     border-radius: 16px;
-    background-color: var(--main-effect-color);
+    background-color: var(--dark-accent-color);
     border: 0;
+    transition: .3s;
 }
 
 #classes-page .class-category-panel .btn-primary:hover {
-    background-color: var(--dark-accent-color);
+    background-color: var(--main-effect-color);
     border: 0;
+    transition: .3s;
 }
 
 /* instructors.html */
@@ -226,6 +272,21 @@ footer hr {
     height: 100%;
     min-height: 480px;
 }
+
+#contacts-page .btn-primary {
+    padding: 4px 40px;
+    border-radius: 16px;
+    background-color: var(--dark-accent-color);
+    border: 0;
+    transition: .3s;
+}
+
+#contacts-page .btn-primary:hover {
+    background-color: var(--main-effect-color);
+    border: 0;
+    transition: .3s;
+}
+
 
 /* media query */
 @media (max-width: 576px) {

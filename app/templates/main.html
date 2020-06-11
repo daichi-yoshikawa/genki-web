@@ -4,8 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Genki Crew Dance School</title>
-  {% assets "css_vendor" %}<link rel="stylesheet" href="{{ ASSET_URL }}"/>{% endassets %}
-  {% assets "js_vendor" %}<script type="text/javascript" src="{{ ASSET_URL }}"></script>{% endassets %}
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}">
   {% assets "css_head" %}<link rel="stylesheet" href="{{ ASSET_URL }}"/>{% endassets %}
   {% assets "js_head" %}<script type="text/javascript" src="{{ ASSET_URL }}"></script>{% endassets %}
 </head>
@@ -14,7 +13,7 @@
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
       <div class="container" id="nav-container">
         <router-link to="/" class="navbar-brand mb-0 h1 font-weight-bold">
-          <img src="{{ url_for('static', filename='img/genki_logo.png') }}" class="nav-logo ss-vcentered mr-2"><span class="nav-logo-text d-none d-sm-inline-block">Genki Crew Dance School</span>
+          <img src="{{ url_for('static', filename='img/genki_logo.png') }}" class="nav-logo mr-2"><span class="ss-vcentered nav-logo-text d-none d-sm-inline-block">Genki Crew Dance School</span>
         </router-link>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar--responsive">
           <span class="navbar-toggler-icon"></span>

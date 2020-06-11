@@ -11,28 +11,48 @@
   <div class="container">
     <div class="row padding">
       <div class="col-lg-6 col-md-12 my-auto text-wrap mx-auto">
-        <div class="ss-div-h-centered ss-fadein ss-fadein-slow">
-          <h1 class="section-main-header">Try Us For Free!</h1>
-          <hr>
-          <div class="mt-4 mb-4">
-            <p>
-              <i class="fas fa-envelope mr-2 mt-1 ss-v-centered"></i>
-              <span class="email font-weight-bold">genkicrewdanceschool@gmail.com</span>
-              <a type="button" @click="doCopy"><i class="far fa-copy ss-vcentered" title="Copy Genki's E-mail Address"></i></a>
-              <br><span class="small notation-text font-weight-bold">We can respond in Japanese.</span>
-            </p>
-            <p>
-              <i class="fas fa-map-marker-alt mr-2"></i>
-              <span class="font-weight-normal">Harmony Club, 1777 Saratoga Ave., San Jose</span><br>
-              <i class="fas fa-map-marker-alt mr-2"></i><span class="font-weight-normal">Akiyama Wellness Center, 110 Jackson St., San Jose</span><br>
-              <span class="small notation-text font-weight-bold">Studio location differs depending on a class.<br>See <router-link to="/classes/#"><u class="notation-text">Classes</u></router-link> page for more details.</span>
-            </p>
-          </div>
+        <div class="ss-div-h-centered ss-fadein">
+          <h1 class="section-main-header mb-4">Try Us For Free!</h1>
+          <form name="shake">
+            <div class="form-group label-floating">
+              <div class="row">
+                <div class="col-6">
+                  <input type="text" name="first-name" placeholder="First Name *" class="form-control mb-2" required="">
+                </div>
+                <div class="col-6">
+                  <input type="text" name="last-name" placeholder="Last Name" class="form-control mb-2">
+                </div>
+                <div class="col-12">
+                  <input type="email" name="email" placeholder="E-mail Address *" class="form-control mb-2" required="">
+                </div>
+                <div class="col-12 mt-2">
+                  <textarea type="text" name="message" placeholder="Your Message *" required=""></textarea>
+                  <span class="small notation-text font-weight-bold pl-2">We can respond in Japanese.</span>
+                </div>
+                <div class="col-12 mt-2">
+                  <button class="btn btn-primary btn-sm font-weight-bold" type="submit">Send Message</button>
+                </div>
+                <div class="col-12 mt-4">
+                  <span class="small">Or you can text us directly.</span><br>
+                  <i class="fas fa-envelope mr-2 mt-1 ss-v-centered"></i>
+                  <span class="email font-weight-bold">genkicrewdanceschool@gmail.com</span>
+                  <a type="button" @click="doCopy"><i class="far fa-copy ss-vcentered" title="Copy Genki's E-mail Address"></i></a>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
       <div class="col-lg-6 col-md-12">
         <div class="ss-responsive-iframe-container google-map-container ss-fadein ss-fadein-slow">
           <iframe class="ss-responsive-iframe" style="position:relative; top:-46px; border:none;" src="https://www.google.com/maps/d/u/0/embed?mid=1f6iMSAhv_MRUCHU0BOJY960Fjr1MiwrR"></iframe>
+        </div>
+        <div class="address-list-container" style="position:relative; top:-40px">
+          <span class="small notation-text font-weight-bold">Studio location differs depending on a class. See <router-link to="/classes/#"><u class="notation-text">Classes</u></router-link> for more details.</span><br>
+          <i class="fas fa-map-marker-alt mr-2"></i>
+          <span class="font-weight-normal small">Harmony Club, 1777 Saratoga Ave., San Jose</span><br>
+          <i class="fas fa-map-marker-alt mr-2"></i>
+          <span class="font-weight-normal small">Akiyama Wellness Center, 110 Jackson St., San Jose</span>
         </div>
       </div>
     </div>

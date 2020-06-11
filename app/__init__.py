@@ -15,12 +15,15 @@ def create_app():
     app.register_blueprint(main_blueprint, url_prefi='/')
 
     bundles = {
-      'css_vendor': Bundle(
+      'css_head': Bundle(
         'vendors/bootstrap-4.5.0-dist/css/bootstrap.min.css',
         'vendors/bootstrap-select-1.13.14/dist/css/bootstrap-select.min.css',
-        output='gen/vendor_css.css'
+        'css/variable.css',
+        'css/shared_style.css',
+        'css/style.css',
+        output="gen/css_head.css",
       ),
-      'js_vendor': Bundle(
+      'js_head': Bundle(
         'vendors/jquery-3.5.1/jquery-3.5.1.min.js',
         'vendors/popper-1.16.1/popper.min.js',
         'vendors/bootstrap-4.5.0-dist/js/bootstrap.bundle.min.js',
@@ -29,16 +32,6 @@ def create_app():
         'vendors/vue-router.js-3.3.2/vue-router.js',
         'vendors/vue-clipboard2-0.3.1/dist/vue-clipboard.min.js',
         'vendors/fontawesome-5.13.0/all.js',
-        output="gen/vendor_js.js",
-        filters="jsmin"
-      ),
-      'css_head': Bundle(
-        'css/variable.css',
-        'css/shared_style.css',
-        'css/style.css',
-        output="gen/css_head.css",
-      ),
-      'js_head': Bundle(
         'assets/shared_utils.js',
         output="gen/js_head.js",
         filters="jsmin"
