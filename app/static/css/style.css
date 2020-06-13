@@ -1,5 +1,5 @@
 :root {
-    --h1-font: Impact, Fantasy, 'Arial Black', Sans-serif;
+    --h1-font: Impact, 'Arial Black', Sans-serif;
     --h1-color: #333333;
     --h2-font: 'Verdana', 'Tahoma', 'Arial Black', Sans-serif;
     --h2-color: #666666;;
@@ -118,7 +118,7 @@ footer hr {
 
 /* index.html */
 #index-page #custom-carousel-main .carousel-caption h1 {
-    font-family: Impact, Fantasy, 'Arial Black', Sans-serif;
+    font-family: Impact, 'Arial Black', Sans-serif;
     text-shadow: 0 0 12px var(--text-shadow-color);
 }
 

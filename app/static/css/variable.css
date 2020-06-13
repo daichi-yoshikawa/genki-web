@@ -4,8 +4,8 @@
     /* fonts */
     /* Sans-serif, Helvetica, Arial, Fantasy */
     --main-font: 'Open Sans', Robot, Helvetica, Arial, Sans-serif;
-    --nav-logo-text-font: Impact, Fantasy, 'Arial Black', Sans-serif;
-    --nav-item-font: Impact, Fantasy, 'Arial Black', Sans-serif;
+    --nav-logo-text-font: Impact, 'Arial Black', Sans-serif;
+    --nav-item-font: Impact, 'Arial Black', Sans-serif;
     --email-font: 'Lucida Console', 'Lucida Sans Typewriter', 'Andale Mono', Consolas, 'Courier', 'Courier New', Monospace;
     --notation-font: var(--main-font);
     --accordion-toggle-text-font: var(--main-font);
