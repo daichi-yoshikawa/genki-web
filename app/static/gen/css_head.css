@@ -16,10 +16,10 @@
 :root {
     /* fonts */
     /* Sans-serif, Helvetica, Arial, Fantasy */
-    --main-font: 'Open Sans', Robot, Helvetica, Arial, Sans-serif;
-    --nav-logo-text-font: Impact, Fantasy, 'Arial Black', Sans-serif;
-    --nav-item-font: Impact, Fantasy, 'Arial Black', Sans-serif;
-    --email-font: 'Lucida Console', 'Lucida Sans Typewriter', 'Andale Mono', Consolas, 'Courier', 'Courier New', Monospace;
+    --main-font: 'Open Sans', sans-serif;
+    --nav-logo-text-font: 'Anton', sans-serif;
+    --nav-item-font: 'Anton', sans-serif;
+    --email-font: 'Ubuntu Mono', monospace;
     --notation-font: var(--main-font);
     --accordion-toggle-text-font: var(--main-font);
 
@@ -498,9 +498,9 @@ nav .nav-logo-text {
 
 
 :root {
-    --h1-font: Impact, Fantasy, 'Arial Black', Sans-serif;
+    --h1-font: 'Anton', sans-serif;
     --h1-color: #333333;
-    --h2-font: 'Verdana', 'Tahoma', 'Arial Black', Sans-serif;
+    --h2-font: 'Didact Gothic', sans-serif;
     --h2-color: #666666;;
     --placeholder-font-size: 0.8rem;
 }
@@ -617,7 +617,7 @@ footer hr {
 
 /* index.html */
 #index-page #custom-carousel-main .carousel-caption h1 {
-    font-family: Impact, Fantasy, 'Arial Black', Sans-serif;
+    font-family: Impact, 'Arial Black', Sans-serif;
     text-shadow: 0 0 12px var(--text-shadow-color);
 }
 

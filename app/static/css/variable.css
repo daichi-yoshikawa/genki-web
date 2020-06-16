@@ -3,10 +3,10 @@
 :root {
     /* fonts */
     /* Sans-serif, Helvetica, Arial, Fantasy */
-    --main-font: 'Open Sans', Robot, Helvetica, Arial, Sans-serif;
-    --nav-logo-text-font: Impact, 'Arial Black', Sans-serif;
-    --nav-item-font: Impact, 'Arial Black', Sans-serif;
-    --email-font: 'Lucida Console', 'Lucida Sans Typewriter', 'Andale Mono', Consolas, 'Courier', 'Courier New', Monospace;
+    --main-font: 'Open Sans', sans-serif;
+    --nav-logo-text-font: 'Anton', sans-serif;
+    --nav-item-font: 'Anton', sans-serif;
+    --email-font: 'Ubuntu Mono', monospace;
     --notation-font: var(--main-font);
     --accordion-toggle-text-font: var(--main-font);
 
