@@ -16,7 +16,7 @@
 :root {
     /* fonts */
     /* Sans-serif, Helvetica, Arial, Fantasy */
-    --main-font: 'Open Sans', sans-serif;
+    --main-font: 'Montserrat', sans-serif;
     --nav-logo-text-font: 'Anton', sans-serif;
     --nav-item-font: 'Anton', sans-serif;
     --email-font: 'Ubuntu Mono', monospace;
@@ -500,8 +500,10 @@ nav .nav-logo-text {
 :root {
     --h1-font: 'Anton', sans-serif;
     --h1-color: #333333;
-    --h2-font: 'Didact Gothic', sans-serif;
-    --h2-color: #666666;;
+    --h2-font: 'Montserrat', sans-serif;
+    --h2-color: #666666;
+    --h3-font: 'Barlow Semi Condensed', sans-serif;
+    --h4-font: 'Barlow Semi Condensed', sans-serif;
     --placeholder-font-size: 0.8rem;
 }
 
@@ -660,7 +662,8 @@ footer hr {
 
 /* classes.html */
 #classes-page .class-category-panel h3 {
-    font-family: var(--h1-font);
+    font-family: var(--h3-font);
+    font-weight: 700;
 }
 
 #classes-page .custom-container-on-overlayed-img {
@@ -689,8 +692,8 @@ footer hr {
 }
 
 #classes-page .class-category-panel .class-panel h4 {
-    font-family: var(--h1-font);
-    font-size: 1rem;
+    font-family: var(--h4-font);
+    font-weight: 500;
 }
 
 #classes-page .class-category-panel .btn-primary {

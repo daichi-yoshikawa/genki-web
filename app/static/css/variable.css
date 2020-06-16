@@ -3,7 +3,7 @@
 :root {
     /* fonts */
     /* Sans-serif, Helvetica, Arial, Fantasy */
-    --main-font: 'Open Sans', sans-serif;
+    --main-font: 'Montserrat', sans-serif;
     --nav-logo-text-font: 'Anton', sans-serif;
     --nav-item-font: 'Anton', sans-serif;
     --email-font: 'Ubuntu Mono', monospace;
